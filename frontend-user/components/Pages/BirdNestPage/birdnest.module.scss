@@ -1,0 +1,15 @@
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.bgContainer {
+  background: url("/images/birdnest-sub-bg-1.svg") right 100px no-repeat,
+    url(/images/birdnest-sub-bg-2.svg) left bottom no-repeat;
+    background-size: auto, 400px;
+}
+.banner {
+  min-height: 480px;
+  background: url("/images/bg-birdnest.png") no-repeat center;
+  background-size: cover;
+}

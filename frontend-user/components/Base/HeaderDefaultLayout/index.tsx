@@ -1,7 +1,5 @@
-import React from "react"
-import Link from "next/link"
 import Image from "next/image"
-import ButtonLink from "../ButtonLink"
+import Link from "next/link"
 
 const HeaderDefaultLayout = () => {
   return (
@@ -24,13 +22,13 @@ const HeaderDefaultLayout = () => {
         <Link href="/faq">FAQ</Link>
         <Link href="/community">Community</Link>
       </div>
-      <ButtonLink
+      {/* <ButtonLink
         href="https://facebook.com"
         className="px-[34px] h-12 rounded-xl bg-main text-xs uppercase"
         target="_blank"
       >
         Download Whitepaper
-      </ButtonLink>
+      </ButtonLink> */}
     </nav>
   )
 }

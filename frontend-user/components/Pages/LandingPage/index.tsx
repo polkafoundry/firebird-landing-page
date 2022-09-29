@@ -241,7 +241,7 @@ const LandingPage = () => {
           </p>
 
           <div className="flex justify-between pl-10 mt-20">
-            <div className="flex flex-col max-w-[420px] pt-10">
+            <div className="flex flex-col max-w-[440px] pr-5 justify-center">
               <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
                 The Firebird Blog
               </p>
@@ -260,13 +260,13 @@ const LandingPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px] drop-shadow-xl">
-              <Image src={birdnestBlog} alt="" />
+            <div className="flex max-w-[640px] drop-shadow-xl items-center">
+              <Image src={birdnestBlog} alt="" objectFit="contain" />
             </div>
           </div>
 
           <div className="flex flex-row-reverse justify-between pr-10 mt-20">
-            <div className="flex flex-col max-w-[420px] pt-10">
+            <div className="flex flex-col max-w-[440px] pl-5 justify-center">
               <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
                 Developer Hub
               </p>
@@ -298,13 +298,13 @@ const LandingPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px]">
-              <Image src={birdnestDeveloper} alt="" />
+            <div className="flex max-w-[640px] items-center">
+              <Image src={birdnestDeveloper} alt="" objectFit="contain" />
             </div>
           </div>
 
           <div className="flex justify-between pl-10 mt-40">
-            <div className="flex flex-col max-w-[420px] pt-10">
+            <div className="flex flex-col max-w-[440px] pr-5 justify-center">
               <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
                 Firebird Documentation
               </p>
@@ -323,8 +323,8 @@ const LandingPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px]">
-              <Image src={birdnestDocumentation} alt="" />
+            <div className="flex max-w-[640px] items-center">
+              <Image src={birdnestDocumentation} alt="" objectFit="contain" />
             </div>
           </div>
         </div>
@@ -433,7 +433,10 @@ const LandingPage = () => {
                   href={item.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-black rounded-xl py-3 px-7 flex items-center gap-3"
+                  className={clsx(
+                    styles.cardCommunityHover,
+                    "rounded-xl py-3 px-7 flex items-center gap-3"
+                  )}
                   key={index + 2000}
                 >
                   <Image src={item.img} alt="" width={40} height={40} />

@@ -1,11 +1,11 @@
 import React from "react"
 import DefaultLayout from "../../components/Layouts/DefaultLayout"
-import WriterPage from "../../components/Pages/WriterPage"
+import BirdNestPage from "../../components/Pages/BirdNestPage"
 
 const Writer = () => {
   return (
     <DefaultLayout>
-      <WriterPage />
+      <BirdNestPage />
     </DefaultLayout>
   )
 }

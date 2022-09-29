@@ -25,6 +25,7 @@ module.exports = {
     colors: {
       main: "#EB522F",
       birdGray: "#747474",
+      birdLightGray: "#f7f7f8",
       birdPurple: "#6B2FEB",
       birdGreen: "#00CE5F",
       birdOrange: "#FB7800",
