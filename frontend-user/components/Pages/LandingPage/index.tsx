@@ -4,9 +4,9 @@ import ButtonLink from "../../Base/ButtonLink"
 import FeatureCard from "./FeatureCard"
 import styles from "./landing.module.scss"
 
-import birdnestBlog from "/public/images/birdnest-blog.svg"
-import birdnestDeveloper from "/public/images/birdnest-developer.svg"
-import birdnestDocumentation from "/public/images/birdnest-documentation.svg"
+import birdnestBlog from "/public/images/birdnest-blog.png"
+import birdnestDeveloper from "/public/images/birdnest-developer.png"
+import birdnestDocumentation from "/public/images/birdnest-documentation.png"
 import imgEcosystem from "/public/images/ecosystem.svg"
 import imgBell from "/public/images/img-bell.png"
 import imgLock from "/public/images/img-lock.png"
@@ -24,7 +24,7 @@ export type FeatureTypes = {
 const features: Array<FeatureTypes> = [
   {
     title: "Fast and Effective",
-    image: "/images/features-fast-effective.svg",
+    image: "/images/features-fast-effective.png",
     detail:
       "Firebird has the capacity to execute a huge number of transactions per second and guarantee immediate transaction finality at a near-zero fee."
   },
@@ -42,13 +42,13 @@ const features: Array<FeatureTypes> = [
   },
   {
     title: "Layer 2 ",
-    image: "/images/features-layer-2.svg",
+    image: "/images/features-layer-2.png",
     detail:
       "Firebird solves scalability problems by utilizing Layer 2 solutions for lower transaction fees, higher speed, and more security."
   },
   {
     title: "Compliance",
-    image: "/images/features-compliance.svg",
+    image: "/images/features-compliance.png",
     detail:
       "Provide an anti-cheat mechanism and security detection to keep players from hacking or cheating and to ensure game fairness. "
   }
@@ -57,19 +57,19 @@ const features: Array<FeatureTypes> = [
 const usecases: Array<FeatureTypes> = [
   {
     title: "Game Hub & Gaming Platform",
-    image: "/images/usecase-gaming.svg",
+    image: "/images/usecase-gaming.png",
     detail:
       "Firebird is designed to scale high-performance game platforms that require a quick and seamless user experience. The goal of Firebird is to boost player-to-player and player-to-developer interactions."
   },
   {
     title: "NFT Collectibles & Marketplace",
-    image: "/images/usecase-nft.svg",
+    image: "/images/usecase-nft.png",
     detail:
       "Offering a UX comparable to traditional applications and onboard new users with a simple approach, providing a suite of integrated services for games. "
   },
   {
     title: "AR - VR & Metaverse",
-    image: "/images/usecase-metaverse.svg",
+    image: "/images/usecase-metaverse.png",
     detail:
       "The Firebird's cross-chain protocol is an ideal solution to ensuring data acquisition, storage, interoperability, and privacy preservation, which are the metaverse's main driving forces."
   }
