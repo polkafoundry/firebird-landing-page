@@ -1,23 +1,23 @@
 import Head from "next/head"
 import DefaultLayout from "../../components/Layouts/DefaultLayout"
-import BirdNestPage from "../../components/Pages/BirdNestPage"
+import CommunityPage from "../../components/Pages/CommunityPage"
 
-const BirdNest = () => {
+const Community = () => {
   return (
     <>
       <Head>
-        <title>Firebird Nest</title>
+        <title>Firebird Community</title>
         <meta
           name="description"
-          content="Unlock the door to the Firebird World"
+          content="A space for all blockchain enthusiasts. Developers, investors, users, etc., everyone is welcome!"
         />
         <link rel="icon" href="/logo.svg" />
       </Head>
       <DefaultLayout>
-        <BirdNestPage />
+        <CommunityPage />
       </DefaultLayout>
     </>
   )
 }
 
-export default BirdNest
+export default Community

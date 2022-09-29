@@ -1,16 +1,14 @@
-import React from "react"
 import clsx from "clsx"
-import styles from "./birdnest.module.scss"
 import Image from "next/image"
+import styles from "./birdnest.module.scss"
 
 import birdnestBlog from "/public/images/birdnest-blog.png"
 import birdnestDeveloper from "/public/images/birdnest-developer.png"
 import birdnestDocumentation from "/public/images/birdnest-documentation.png"
 
-import { SocialItemTypes, socialsData } from "../../../utils/constants"
+import ButtonLink from "../../Base/ButtonLink"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
-import ButtonLink from "../../Base/ButtonLink"
 
 const BirdNestPage = () => {
   return (
