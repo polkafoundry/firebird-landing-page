@@ -1,0 +1,16 @@
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.bgContainer {
+  background: url("/images/community-sub-bg-1.svg") right -250px no-repeat;
+}
+.banner {
+  min-height: 480px;
+  background: url("/images/bg-faq.png") no-repeat center;
+  background-size: cover;
+}
+.expanding {
+  transition: max-height 0.9s ease-out;
+}

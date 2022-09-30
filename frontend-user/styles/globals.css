@@ -42,6 +42,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: TTHoves;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -17,7 +17,6 @@ const buttonStyles = {
 
 const ButtonLink = (props: ButtonProps) => {
   const { className = "", children, href, target } = props
-  console.log(target ?? "_self")
 
   return (
     <Link href={href}>

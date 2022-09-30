@@ -16,19 +16,11 @@ const HeaderDefaultLayout = () => {
         </a>
       </Link>
       <div className="flex gap-5">
-        <Link href="/about">About Firebird</Link>
         <Link href="/bird-nest">Bird nest</Link>
-        <Link href="/build-nest">Build nest</Link>
-        <Link href="/faq">FAQ</Link>
         <Link href="/community">Community</Link>
+        <Link href="/documentation">Documentation</Link>
+        <Link href="/faq">FAQ</Link>
       </div>
-      {/* <ButtonLink
-        href="https://facebook.com"
-        className="px-[34px] h-12 rounded-xl bg-main text-xs uppercase"
-        target="_blank"
-      >
-        Download Whitepaper
-      </ButtonLink> */}
     </nav>
   )
 }
