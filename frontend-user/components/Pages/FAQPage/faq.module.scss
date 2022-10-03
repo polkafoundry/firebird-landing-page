@@ -11,6 +11,14 @@
   background: url("/images/bg-faq.png") no-repeat center;
   background-size: cover;
 }
-.expanding {
-  transition: max-height 0.9s ease-out;
+.expanded {
+  transition: max-height 0.3s ease-in;
+  color: white;
+  background-color: black;
+}
+.closed {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  color: black;
+  background-color: white;
 }

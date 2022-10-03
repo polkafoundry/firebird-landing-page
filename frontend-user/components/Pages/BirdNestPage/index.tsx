@@ -33,7 +33,7 @@ const BirdNestPage = () => {
         <div
           className={clsx(
             styles.section,
-            "px-[100px] pt-20 pb-[160px] flex flex-col"
+            "px-[100px] pt-20 pb-10 flex flex-col"
           )}
         >
           <div className="flex justify-between pl-10 bg-white rounded-[32px] pt-[60px]">
@@ -99,7 +99,7 @@ const BirdNestPage = () => {
             </div>
           </div>
 
-          <div className="flex justify-between pl-10 mt-40 bg-white rounded-[32px] pt-[60px]">
+          <div className="flex justify-between pl-10 mt-8 bg-white rounded-[32px] pt-9 pr-5 pb-10">
             <div className="flex flex-col max-w-[440px] pr-5 justify-center">
               <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
                 Firebird Documentation

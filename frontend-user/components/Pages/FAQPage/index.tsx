@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "./faq.module.scss"
 
 import iconSearch from "/public/images/icon-search-white.svg"
@@ -67,16 +67,28 @@ const faqs: Array<FaqTypes> = [
 ]
 
 const FAQPage = () => {
+  const itemsRef = useRef([])
+  const [faqData, setFaqData] = useState<Array<FaqTypes>>(faqs)
+
   const [inputSearch, setInputSearch] = useState<string>("")
   const [expandedIds, setExpandedIds] = useState<Array<number>>([])
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("search", inputSearch)
+      const newFaqs = [...faqs].filter(
+        (item: FaqTypes) =>
+          checkMatch(item.question, inputSearch) ||
+          checkMatch(item.answer, inputSearch)
+      )
+      setFaqData(newFaqs)
     }, 500)
 
     return () => clearTimeout(timer)
   }, [inputSearch])
+
+  const checkMatch = (string: string, keyword: string) => {
+    return string.toLowerCase().includes(keyword.toLowerCase())
+  }
 
   const handleSearch = (e: any) => {
     setInputSearch(e.target.value)
@@ -91,7 +103,6 @@ const FAQPage = () => {
     newIds = checkIsExpanded(id)
       ? newIds.filter((item) => item !== id)
       : [...newIds, ...[id]]
-    console.log(newIds)
     setExpandedIds(newIds)
   }
 
@@ -140,16 +151,18 @@ const FAQPage = () => {
             "w-full max-w-[1120px] mx-auto px-10 pt-20 pb-[160px] flex flex-col gap-3"
           )}
         >
-          {faqs.map((item: FaqTypes) => (
+          {faqData.map((item: FaqTypes, index: number) => (
             <div
               key={item.id}
               className={clsx(
-                "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px]",
-                styles.expanding,
-                checkIsExpanded(item.id)
-                  ? "text-white bg-black max-h-max"
-                  : "text-black bg-white max-h-20"
+                "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px] overflow-hidden",
+                checkIsExpanded(item.id) ? styles.expanded : styles.closed
               )}
+              style={{
+                maxHeight: checkIsExpanded(item.id)
+                  ? `${104 + itemsRef.current[index].clientHeight}px`
+                  : "80px"
+              }}
               onClick={() => handleSelectId(item.id)}
             >
               <p className="text-2xl font-semibold flex justify-between">
@@ -160,10 +173,8 @@ const FAQPage = () => {
                 />
               </p>
               <div
-                className={clsx(
-                  "text-lg opacity-80 mt-3",
-                  checkIsExpanded(item.id) ? "block" : "hidden"
-                )}
+                ref={(el) => (itemsRef.current[index] = el)}
+                className={"text-lg opacity-80 mt-5"}
               >
                 {item.answer}
               </div>
