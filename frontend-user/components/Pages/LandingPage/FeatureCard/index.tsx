@@ -1,8 +1,8 @@
 import clsx from "clsx"
 import Image from "next/image"
 import React from "react"
-import { FeatureTypes } from "."
-import styles from "./landing.module.scss"
+import styles from "../landing.module.scss"
+import { FeatureTypes } from "../WhyFirebird"
 
 type FeatureCardProps = {
   feature: FeatureTypes
