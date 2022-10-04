@@ -160,7 +160,7 @@ const FAQPage = () => {
               )}
               style={{
                 maxHeight: checkIsExpanded(item.id)
-                  ? `${104 + itemsRef.current[index].clientHeight}px`
+                  ? `${104 + itemsRef?.current[index]?.clientHeight}px`
                   : "80px"
               }}
               onClick={() => handleSelectId(item.id)}
@@ -174,7 +174,7 @@ const FAQPage = () => {
               </p>
               <div
                 ref={(el) => (itemsRef.current[index] = el)}
-                className={"text-lg opacity-80 mt-5"}
+                className={"text-lg opacity-80 mt-5 whitespace-pre-line"}
               >
                 {item.answer}
               </div>
