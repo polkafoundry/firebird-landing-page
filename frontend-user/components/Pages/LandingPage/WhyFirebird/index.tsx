@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import FeatureCard from "../FeatureCard"
+import Image from "next/image"
 import styles from "../landing.module.scss"
 
 export type FeatureTypes = {
@@ -41,19 +41,63 @@ const features: Array<FeatureTypes> = [
 ]
 const WhyFirebird = () => {
   return (
-    <div className={clsx(styles.section, "px-[100px] pt-24 pb-[140px]")}>
+    <div
+      className={clsx(
+        styles.section,
+        "px-5 xs:px-[60px] md:px-[58px] pt-24 pb-[140px]"
+      )}
+    >
       <div className="flex flex-col w-full">
-        <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider">
+        <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
           Why Firebird?
         </span>
-        <p className="text-center text-[40px] leading-[52px] max-w-[980px] mx-auto font-semibold mt-2">
+        <p
+          className={clsx(
+            "md:text-4xl",
+            "xs:text-5xl",
+            "text-3xl text-center px-3 max-w-[980px] mx-auto font-semibold mt-2"
+          )}
+        >
           Overcome challenges in blockchain gaming with powerful and efficient
           features
         </p>
 
         <div className="flex flex-wrap justify-center gap-[19px] mt-7">
-          {features.map((item: FeatureTypes, index: number) => (
-            <FeatureCard key={index} feature={item} />
+          {features.map((feature: FeatureTypes, index: number) => (
+            <div
+              key={index}
+              className={clsx(
+                styles.cardHover,
+                "flex max-w-full gap-10 w-full pt-[60px] pb-12",
+                "md:flex-col md:max-w-[374px] md:pb-[52px] md:items-start md:pt-8 md:gap-0",
+                "sm:flex-row xs:pb-[60px] xs:pt-8 xs:gap-10 sm:items-center xs:px-10",
+                "flex-col max-w-full pb-[52px] pt-8 gap-3 items-start px-8"
+              )}
+              data-aos="zoom-in"
+            >
+              <div
+                className={clsx(
+                  "md:w-[140px] md:h-[140px]",
+                  "xs:w-[180px] xs:h-[180px]",
+                  "relative w-[100px] h-[100px]"
+                )}
+              >
+                <Image
+                  src={feature.image}
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="flex flex-col flex-1">
+                <span className="md:mt-8 text-3xl font-semibold xs:text-4xl md:text-3xl">
+                  {feature.title}
+                </span>
+                <span className="mt-3 text-sm xs:text-[22px] md:text-base">
+                  {feature.detail}
+                </span>
+              </div>
+            </div>
           ))}
         </div>
       </div>

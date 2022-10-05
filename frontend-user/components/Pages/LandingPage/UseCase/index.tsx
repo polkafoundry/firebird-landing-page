@@ -8,6 +8,7 @@ export type UseCaseTypes = {
   image: string
   detail: string
 }
+
 const usecases: Array<UseCaseTypes> = [
   {
     title: "Game Hub & Gaming Platform",
@@ -28,6 +29,7 @@ const usecases: Array<UseCaseTypes> = [
       "The Firebird's cross-chain protocol is an ideal solution to ensuring data acquisition, storage, interoperability, and privacy preservation, which are the metaverse's main driving forces."
   }
 ]
+
 const UseCase = () => {
   return (
     <div className={clsx(styles.section, "px-[160px] py-[120px]")}>
@@ -36,7 +38,7 @@ const UseCase = () => {
       </span>
       <div className="flex w-full gap-14">
         <div className="flex flex-col w-full max-w-[420px]">
-          <p className="text-[40px] leading-[52px] max-w-[980px] font-semibold mt-2">
+          <p className="text-4xl max-w-[980px] font-semibold mt-2">
             Develop your blockchain ideas on the potential platform
           </p>
           <span className="mt-5 text-lg">
@@ -47,7 +49,7 @@ const UseCase = () => {
 
           <div className="flex mt-7">
             <ButtonLink
-              href="/"
+              href="https://firebird-1.gitbook.io/firebird-whitepaper/use-cases/what-you-can-build"
               target="_blank"
               className="text-white px-12 bg-main"
             >
@@ -60,6 +62,7 @@ const UseCase = () => {
             <div
               key={index + 100}
               className={clsx(styles.cardHorizontalHover, "flex gap-5 p-4")}
+              data-aos="fade-up"
             >
               <div className="relative w-full h-full max-w-[160px] rounded-lg">
                 <Image

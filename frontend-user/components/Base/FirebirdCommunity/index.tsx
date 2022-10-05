@@ -13,7 +13,7 @@ const FirebirdCommunity = () => {
         <p className="text-[44px] leading-[54px] font-semibold">
           Find your place in the Firebird Community
         </p>
-        <div className="relative mt-10">
+        <div className="relative mt-10" data-aos="zoom-in">
           <Image src={imgBell} alt="" />
         </div>
       </div>

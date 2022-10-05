@@ -20,7 +20,7 @@ const CommunityPage = () => {
           <p className="text-[80px] leading-[100px] font-birdMedium font-semibold">
             Firebird Community
           </p>
-          <p className="mt-5 text-[28px] font-birdMedium max-w-[640px] mx-auto">
+          <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
             A space for all blockchain enthusiasts. Developers, investors,
             users, etc., everyone is welcome!
           </p>

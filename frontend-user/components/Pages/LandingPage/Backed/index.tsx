@@ -30,7 +30,7 @@ const Backed = () => {
     <div className={styles.bgBacked}>
       <div className={clsx(landingStyles.section, "px-[138px] pt-20")}>
         <div className="flex flex-col justify-center">
-          <p className="text-[40px] leading-[52px] font-semibold text-center w-full">
+          <p className="text-4xl font-semibold text-center w-full">
             Backed by
           </p>
           <a
@@ -51,7 +51,7 @@ const Backed = () => {
             <p className="text-center text-xl font-semibold">Icetea Labs</p>
           </a>
 
-          <p className="mt-20 text-center font-semibold text-[40px] leading-[52px] max-w-[980px] mx-auto">
+          <p className="mt-20 text-center font-semibold text-4xl max-w-[980px] mx-auto">
             <span className="bg-main text-white px-1 rounded-md">
               Our partners
             </span>{" "}

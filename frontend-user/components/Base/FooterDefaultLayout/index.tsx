@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { SocialItemTypes, socialsData } from "../../../utils/constants"
-
 import logoText from "/public/images/logo-text.svg"
+import Tippy from "@tippyjs/react"
 
 const buyPkfExchanges = [
   {
@@ -29,7 +29,7 @@ const siteMaps = [
   },
   {
     label: "Documentation",
-    url: "/documentation"
+    url: "https://firebird-1.gitbook.io/firebird-whitepaper/"
   },
   {
     label: "Community",
@@ -44,7 +44,7 @@ const siteMaps = [
 const FooterDefaultLayout = () => {
   return (
     <div className="bg-black text-white w-full">
-      <div className="flex flex-col max-w-[1440px] px-40 mx-auto pt-24 mb-3 box-border">
+      <div className="flex flex-col max-w-screen-main px-40 mx-auto pt-24 mb-3 box-border">
         <div className="w-full flex">
           <div className="flex flex-col max-w-[300px]">
             <div className="flex">
@@ -56,9 +56,11 @@ const FooterDefaultLayout = () => {
             </p>
             <div className="flex gap-3 mt-3">
               {socialsData.map((item: SocialItemTypes, index: number) => (
-                <a href={item.url} target="_blank" rel="noreferrer" key={index}>
-                  <Image src={item.img} alt="" width={28} height={28} />
-                </a>
+                <Tippy key={index} content={item.label} placement="bottom">
+                  <a href={item.url} target="_blank" rel="noreferrer">
+                    <Image src={item.img} alt="" width={28} height={28} />
+                  </a>
+                </Tippy>
               ))}
             </div>
           </div>
@@ -86,8 +88,10 @@ const FooterDefaultLayout = () => {
               <div className="flex flex-wrap gap-2 mt-2">
                 {siteMaps.map((item: any, index: number) => (
                   <a
-                    href={item.url}
                     key={index + 100}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-full max-w-[120px] hover:underline"
                   >
                     {item.label}

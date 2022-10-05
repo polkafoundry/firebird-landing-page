@@ -29,7 +29,7 @@ const BirdNest = () => {
 
         <div className="flex justify-between pl-10 mt-20">
           <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-            <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+            <p className="text-4xl font-semibold font-birdMedium">
               The Firebird Blog
             </p>
             <span className="mt-4">
@@ -47,14 +47,17 @@ const BirdNest = () => {
               </ButtonLink>
             </div>
           </div>
-          <div className="flex max-w-[640px] drop-shadow-xl items-center">
+          <div
+            className="flex max-w-[640px] drop-shadow-xl items-center"
+            data-aos="fade-right"
+          >
             <Image src={birdnestBlog} alt="" objectFit="contain" />
           </div>
         </div>
 
         <div className="flex flex-row-reverse justify-between pr-10 mt-20">
           <div className="flex flex-col max-w-[440px] pl-5 justify-center">
-            <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+            <p className="text-4xl font-semibold font-birdMedium">
               Developer Hub
             </p>
             <span className="mt-4">
@@ -85,14 +88,14 @@ const BirdNest = () => {
               </ButtonLink>
             </div>
           </div>
-          <div className="flex max-w-[640px] items-center">
+          <div className="flex max-w-[640px] items-center" data-aos="fade-left">
             <Image src={birdnestDeveloper} alt="" objectFit="contain" />
           </div>
         </div>
 
         <div className="flex justify-between pl-10 mt-40">
           <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-            <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+            <p className="text-4xl font-semibold font-birdMedium">
               Firebird Documentation
             </p>
             <span className="mt-4">
@@ -102,7 +105,7 @@ const BirdNest = () => {
             </span>
             <div className="flex mt-7">
               <ButtonLink
-                href="https://www.facebook.com/"
+                href="https://firebird-1.gitbook.io/firebird-whitepaper/"
                 target="_blank"
                 className="px-[43px] bg-black text-white"
               >
@@ -110,7 +113,10 @@ const BirdNest = () => {
               </ButtonLink>
             </div>
           </div>
-          <div className="flex max-w-[640px] items-center">
+          <div
+            className="flex max-w-[640px] items-center"
+            data-aos="fade-right"
+          >
             <Image src={birdnestDocumentation} alt="" objectFit="contain" />
           </div>
         </div>

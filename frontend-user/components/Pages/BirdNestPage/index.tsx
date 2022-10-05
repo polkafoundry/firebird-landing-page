@@ -23,7 +23,7 @@ const BirdNestPage = () => {
           <p className="-mt-6 text-[80px] leading-[100px] font-birdMedium font-semibold">
             Bird Nest
           </p>
-          <p className="mt-5 text-[28px] font-birdMedium max-w-[640px] mx-auto">
+          <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
             Unlock the door to the Firebird World
           </p>
         </div>
@@ -38,7 +38,7 @@ const BirdNestPage = () => {
         >
           <div className="flex justify-between pl-10 bg-white rounded-[32px] pt-[60px]">
             <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-              <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+              <p className="text-4xl font-semibold font-birdMedium">
                 The Firebird Blog
               </p>
               <span className="mt-4">
@@ -48,7 +48,7 @@ const BirdNestPage = () => {
               </span>
               <div className="flex mt-7">
                 <ButtonLink
-                  href="https://www.facebook.com/"
+                  href="https://firebird-techblog.netlify.app/"
                   target="_blank"
                   className="px-[43px] bg-black text-white"
                 >
@@ -63,7 +63,7 @@ const BirdNestPage = () => {
 
           <div className="flex flex-row-reverse justify-between px-[60px] py-[60px] mt-8 bg-white rounded-[32px]">
             <div className="flex flex-col max-w-[440px] pl-5 justify-center">
-              <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+              <p className="text-4xl font-semibold font-birdMedium">
                 Developer Hub
               </p>
               <span className="mt-4">
@@ -101,7 +101,7 @@ const BirdNestPage = () => {
 
           <div className="flex justify-between pl-10 mt-8 bg-white rounded-[32px] pt-9 pr-5 pb-10">
             <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-              <p className="text-[40px] leading-[52px] font-semibold font-birdMedium">
+              <p className="text-4xl font-semibold font-birdMedium">
                 Firebird Documentation
               </p>
               <span className="mt-4">
@@ -111,7 +111,7 @@ const BirdNestPage = () => {
               </span>
               <div className="flex mt-7">
                 <ButtonLink
-                  href="https://www.facebook.com/"
+                  href="https://firebird-1.gitbook.io/firebird-whitepaper/"
                   target="_blank"
                   className="px-[43px] bg-black text-white"
                 >

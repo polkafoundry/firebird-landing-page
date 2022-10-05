@@ -11,7 +11,7 @@ const Ecosystem = () => {
           <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider">
             Join the Firebird ecosystem
           </span>
-          <p className="text-center text-[40px] leading-[52px] max-w-[980px] mx-auto font-semibold mt-2 mb-10">
+          <p className="text-center text-4xl max-w-[980px] mx-auto font-semibold mt-2 mb-10">
             {`Grow your project using the Firebird ecosystem's end-to-end
               infrastructure.`}
           </p>
