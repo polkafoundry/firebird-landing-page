@@ -46,7 +46,7 @@ const LandingPage = () => {
 
       <Roadmap />
 
-      {/* <Backed /> */}
+      <Backed />
 
       <Community />
     </div>

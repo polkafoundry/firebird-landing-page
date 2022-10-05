@@ -68,7 +68,10 @@ const BirdNestPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px] drop-shadow-xl items-center">
+            <div
+              className="flex max-w-[640px] drop-shadow-xl items-center"
+              data-aos="fade-right"
+            >
               <Image src={birdnestBlog} alt="" objectFit="contain" />
             </div>
           </div>
@@ -120,7 +123,10 @@ const BirdNestPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px] items-center">
+            <div
+              className="flex max-w-[640px] items-center"
+              data-aos="fade-left"
+            >
               <Image src={birdnestDeveloper} alt="" objectFit="contain" />
             </div>
           </div>
@@ -155,7 +161,10 @@ const BirdNestPage = () => {
                 </ButtonLink>
               </div>
             </div>
-            <div className="flex max-w-[640px] items-center">
+            <div
+              className="flex max-w-[640px] items-center"
+              data-aos="fade-right"
+            >
               <Image src={birdnestDocumentation} alt="" objectFit="contain" />
             </div>
           </div>

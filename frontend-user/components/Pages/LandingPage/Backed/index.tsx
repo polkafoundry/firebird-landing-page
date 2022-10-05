@@ -59,7 +59,7 @@ const Backed = () => {
             and benefits.
           </p>
 
-          <div className="w-full flex flex-wrap gap-3 mt-7">
+          <div className="w-full flex flex-wrap gap-3 mt-7 justify-center">
             {partners.map((item: PartnerTypes, index: number) => (
               <a
                 key={index + 1000}
