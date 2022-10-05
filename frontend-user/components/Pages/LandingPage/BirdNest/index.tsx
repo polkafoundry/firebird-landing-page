@@ -39,7 +39,7 @@ const BirdNest = () => {
             </span>
             <div className="flex mt-7">
               <ButtonLink
-                href="https://www.facebook.com/"
+                href="https://firebird-techblog.netlify.app/"
                 target="_blank"
                 className="px-[43px] bg-black text-white"
               >
