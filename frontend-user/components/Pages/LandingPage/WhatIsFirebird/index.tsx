@@ -29,7 +29,7 @@ const WhatIsFirebird = () => {
             <span className="bg-main text-white rounded-md px-1">
               user-friendly
             </span>{" "}
-            realtime Dapps with cheap costs while never compromising security
+            realtime Dapps with near zero costs while never compromising security
           </p>
         </div>
 
