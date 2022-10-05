@@ -6,7 +6,7 @@ import styles from "./community.module.scss"
 const Community = () => {
   return (
     <div className={styles.bgCommunity}>
-      <div className={clsx(landingStyles.section, "px-[100px] pt-20 pb-20")}>
+      <div className={clsx(landingStyles.section, "px-5 md:px-[100px] pt-[60px] md:pt-20 pb-20")}>
         <FirebirdCommunity />
       </div>
     </div>

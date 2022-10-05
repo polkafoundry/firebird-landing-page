@@ -1,30 +1,34 @@
 import clsx from "clsx"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import ButtonLink from "../../../Base/ButtonLink"
 import styles from "../landing.module.scss"
 
+import imgNft from "/public/images/usecase-nft.png"
+import imgGaming from "/public/images/usecase-gaming.png"
+import imgMetaverse from "/public/images/usecase-metaverse.png"
+
 export type UseCaseTypes = {
   title: string
-  image: string
+  image: StaticImageData
   detail: string
 }
 
 const usecases: Array<UseCaseTypes> = [
   {
     title: "Game Hub & Gaming Platform",
-    image: "/images/usecase-gaming.png",
+    image: imgGaming,
     detail:
       "Firebird is designed to scale high-performance game platforms that require a quick and seamless user experience. The goal of Firebird is to boost player-to-player and player-to-developer interactions."
   },
   {
     title: "NFT Collectibles & Marketplace",
-    image: "/images/usecase-nft.png",
+    image: imgNft,
     detail:
       "Offering a UX comparable to traditional applications and onboard new users with a simple approach, providing a suite of integrated services for games. "
   },
   {
     title: "AR - VR & Metaverse",
-    image: "/images/usecase-metaverse.png",
+    image: imgMetaverse,
     detail:
       "The Firebird's cross-chain protocol is an ideal solution to ensuring data acquisition, storage, interoperability, and privacy preservation, which are the metaverse's main driving forces."
   }
@@ -32,13 +36,18 @@ const usecases: Array<UseCaseTypes> = [
 
 const UseCase = () => {
   return (
-    <div className={clsx(styles.section, "px-[160px] py-[120px]")}>
-      <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider">
+    <div
+      className={clsx(
+        styles.section,
+        "px-8 py-[60px] md:px-[160px] md:py-[120px] text-center md:text-left"
+      )}
+    >
+      <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
         What can you create on Firebird?
       </span>
-      <div className="flex w-full gap-14">
-        <div className="flex flex-col w-full max-w-[420px]">
-          <p className="text-4xl max-w-[980px] font-semibold mt-2">
+      <div className="flex flex-col md:flex-row w-full gap-14 items-center">
+        <div className="flex flex-col w-full max-w-[420px] items-center">
+          <p className="text-3xl md:text-4xl max-w-[980px] font-semibold mt-2">
             Develop your blockchain ideas on the potential platform
           </p>
           <span className="mt-5 text-lg">
@@ -57,21 +66,19 @@ const UseCase = () => {
             </ButtonLink>
           </div>
         </div>
+
         <div className="flex flex-col gap-3">
           {usecases.map((item: UseCaseTypes, index: number) => (
             <div
               key={index + 100}
-              className={clsx(styles.cardHorizontalHover, "flex gap-5 p-4")}
+              className={clsx(
+                styles.cardHorizontalHover,
+                "flex gap-5 p-5 md:p-4 flex-col md:flex-row"
+              )}
               data-aos="fade-up"
             >
-              <div className="relative w-full h-full max-w-[160px] rounded-lg">
-                <Image
-                  src={item.image}
-                  alt=""
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
+              <div className="relative w-full h-full md:w-[160px] md:h-[130px] mx-auto md:my-auto rounded-lg">
+                <Image src={item.image} alt="" layout="fixed" />
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-2xl font-semibold">{item.title}</span>

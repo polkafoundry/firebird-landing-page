@@ -16,13 +16,18 @@ const LandingPage = () => {
         <div
           className={clsx(
             styles.section,
-            "flex flex-col px-40 text-center justify-center"
+            "flex flex-col px-8 md:px-40 text-center md:justify-center"
           )}
         >
-          <p className="-mt-20 text-[140px] leading-[140px] font-birdMedium font-semibold">
+          <p
+            className={clsx(
+              "md:-mt-20 md:text-[140px] md:leading-[140px]",
+              "mt-32 text-6xl font-birdMedium font-semibold"
+            )}
+          >
             Firebird
           </p>
-          <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
+          <p className="mt-5 text-lg md:text-3xl font-birdMedium max-w-[640px] mx-auto">
             Enhance your next hassle-free and user-friendly NFT gaming &
             metaverse with Firebird
           </p>

@@ -17,19 +17,39 @@ const BirdNest = () => {
       <div
         className={clsx(
           landingStyles.section,
-          "px-[120px] pt-[120px] pb-[160px] flex flex-col"
+          "px-5 md:px-[120px] pt-[120px] pb-[160px] flex flex-col"
         )}
       >
-        <p className="text-[80px] leading-[80px] tracking-wider text-main text-center font-birdMedium font-semibold">
+        <p
+          className={clsx(
+            "text-[60px] leading-[68px] tracking-wider text-main text-center font-birdMedium font-semibold",
+            "md:text-[80px] md:leading-[80px]"
+          )}
+        >
           Bird Nest
         </p>
-        <p className="uppercase tracking-widest font-birdBold font-semibold text-center mt-3">
+        <p
+          className={clsx(
+            "text-sm px-3 uppercase tracking-widest font-birdBold font-semibold text-center mt-3",
+            "md:text-base"
+          )}
+        >
           Unlock the door to the Firebird world
         </p>
 
-        <div className="flex justify-between pl-10 mt-20">
-          <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-            <p className="text-4xl font-semibold font-birdMedium">
+        <div
+          className={clsx(
+            "flex justify-between items-center flex-col-reverse gap-3 pl-0 mt-[60px]",
+            "md:gap-0 md:flex-row md:pl-10 md:mt-20"
+          )}
+        >
+          <div
+            className={clsx(
+              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
+              "md:pr-5"
+            )}
+          >
+            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
               The Firebird Blog
             </p>
             <span className="mt-4">
@@ -55,9 +75,19 @@ const BirdNest = () => {
           </div>
         </div>
 
-        <div className="flex flex-row-reverse justify-between pr-10 mt-20">
-          <div className="flex flex-col max-w-[440px] pl-5 justify-center">
-            <p className="text-4xl font-semibold font-birdMedium">
+        <div
+          className={clsx(
+            "flex justify-between items-center flex-col-reverse gap-3 pr-0 mt-[60px]",
+            "md:gap-0 md:flex-row md:pr-10 md:mt-20"
+          )}
+        >
+          <div
+            className={clsx(
+              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
+              "md:pl-5"
+            )}
+          >
+            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
               Developer Hub
             </p>
             <span className="mt-4">
@@ -93,9 +123,19 @@ const BirdNest = () => {
           </div>
         </div>
 
-        <div className="flex justify-between pl-10 mt-40">
-          <div className="flex flex-col max-w-[440px] pr-5 justify-center">
-            <p className="text-4xl font-semibold font-birdMedium">
+        <div
+          className={clsx(
+            "flex justify-between items-center flex-col-reverse gap-3 pl-0 mt-[60px]",
+            "md:gap-0 md:flex-row md:pl-10 md:mt-20"
+          )}
+        >
+          <div
+            className={clsx(
+              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
+              "md:pr-5"
+            )}
+          >
+            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
               Firebird Documentation
             </p>
             <span className="mt-4">

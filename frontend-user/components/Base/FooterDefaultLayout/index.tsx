@@ -2,6 +2,7 @@ import Image from "next/image"
 import { SocialItemTypes, socialsData } from "../../../utils/constants"
 import logoText from "/public/images/logo-text.svg"
 import Tippy from "@tippyjs/react"
+import clsx from "clsx"
 
 const buyPkfExchanges = [
   {
@@ -44,9 +45,14 @@ const siteMaps = [
 const FooterDefaultLayout = () => {
   return (
     <div className="bg-black text-white w-full">
-      <div className="flex flex-col max-w-screen-main px-40 mx-auto pt-24 mb-3 box-border">
+      <div
+        className={clsx(
+          "flex flex-col max-w-screen-main mx-auto px-7 text-center pt-[60px] mb-3 box-border",
+          "md:px-40 md:pt-24 md:text-left"
+        )}
+      >
         <div className="w-full flex">
-          <div className="flex flex-col max-w-[300px]">
+          <div className="flex flex-col max-w-full w-full md:max-w-[300px] items-center">
             <div className="flex">
               <Image src={logoText} alt="" />
             </div>
@@ -65,7 +71,7 @@ const FooterDefaultLayout = () => {
             </div>
           </div>
 
-          <div className="flex mt-auto ml-auto">
+          <div className="hidden md:flex mt-auto ml-auto">
             <div className="flex flex-col max-w-[250px]">
               <p className="font-semibold">BUY PKF</p>
               <div className="flex flex-wrap gap-2 mt-2">
@@ -101,7 +107,7 @@ const FooterDefaultLayout = () => {
             </div>
           </div>
         </div>
-        <p className="text-center mt-16">
+        <p className="text-center md:mt-16 mt-3">
           Copyright © 2022 . All rights reserved.
         </p>
       </div>

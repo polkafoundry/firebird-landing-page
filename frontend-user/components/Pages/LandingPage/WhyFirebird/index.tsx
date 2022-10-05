@@ -7,6 +7,7 @@ export type FeatureTypes = {
   image: string
   detail: string
 }
+
 const features: Array<FeatureTypes> = [
   {
     title: "Fast and Effective",
@@ -39,6 +40,7 @@ const features: Array<FeatureTypes> = [
       "Provide an anti-cheat mechanism and security detection to keep players from hacking or cheating and to ensure game fairness. "
   }
 ]
+
 const WhyFirebird = () => {
   return (
     <div

@@ -2,6 +2,7 @@ import clsx from "clsx"
 import Image from "next/image"
 import styles from "../landing.module.scss"
 import imgRoadmap from "/public/images/roadmap.svg"
+import imgRoadmapXs from "/public/images/roadmap-xs.svg"
 
 type RoadmapItemTypes = {
   id: string
@@ -59,12 +60,12 @@ const roadmapData: Array<RoadmapItemTypes> = [
 
 const Roadmap = () => {
   console.log(roadmapData)
-  
+
   return (
     <div className="w-full bg-black text-white">
       <div className={clsx(styles.section, "px-[100px] pt-20 pb-[68px]")}>
         <div className="flex flex-col w-full">
-          <p className="text-center text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
+          <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
             Roadmap
           </p>
 
@@ -76,7 +77,12 @@ const Roadmap = () => {
             </ul>
           </div> */}
 
-          <Image src={imgRoadmap} alt="" />
+          <div className="relative hidden md:block">
+            <Image src={imgRoadmap} alt="" />
+          </div>
+          <div className="relative md:hidden flex justify-center">
+            <Image src={imgRoadmapXs} alt="" />
+          </div>
         </div>
       </div>
     </div>
