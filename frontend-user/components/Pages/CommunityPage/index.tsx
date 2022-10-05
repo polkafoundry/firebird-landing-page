@@ -14,13 +14,13 @@ const CommunityPage = () => {
         <div
           className={clsx(
             styles.section,
-            "flex flex-col px-40 text-center justify-center"
+            "flex flex-col px-9 md:px-40 text-center justify-center"
           )}
         >
-          <p className="text-[80px] leading-[100px] font-birdMedium font-semibold">
+          <p className="text-6xl md:text-7xl font-birdMedium font-semibold">
             Firebird Community
           </p>
-          <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
+          <p className="mt-5 text-lg md:text-3xl font-birdMedium max-w-[640px] mx-auto">
             A space for all blockchain enthusiasts. Developers, investors,
             users, etc., everyone is welcome!
           </p>
@@ -31,7 +31,8 @@ const CommunityPage = () => {
         <div
           className={clsx(
             styles.section,
-            "px-[100px] pt-20 pb-[160px] flex flex-col"
+            "p-5 pb-[60px] flex flex-col",
+            'md:px-[100px] md:pt-20 md:pb-[160px]'
           )}
         >
           <FirebirdCommunity />

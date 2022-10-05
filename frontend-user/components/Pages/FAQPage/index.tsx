@@ -67,7 +67,8 @@ const faqs: Array<FaqTypes> = [
 ]
 
 const FAQPage = () => {
-  const itemsRef = useRef([])
+  const answersRef = useRef([])
+  const questionsRef = useRef([])
   const [faqData, setFaqData] = useState<Array<FaqTypes>>(faqs)
 
   const [inputSearch, setInputSearch] = useState<string>("")
@@ -112,13 +113,14 @@ const FAQPage = () => {
         <div
           className={clsx(
             styles.section,
-            "flex flex-col px-40 text-center justify-center"
+            "flex flex-col px-8 text-center justify-center",
+            "md:px-40"
           )}
         >
-          <p className="text-[80px] leading-[100px] font-birdMedium font-semibold">
+          <p className="text-6xl md:text-7xl font-birdMedium font-semibold">
             How can we help you?
           </p>
-          <p className="text-2xl leading-8 font-birdMedium mx-auto">
+          <p className="text-lg md:text-2xl md:leading-8 font-birdMedium mx-auto">
             Find answers to the questions we receive the most frequently here
           </p>
 
@@ -148,7 +150,8 @@ const FAQPage = () => {
       <div className={clsx("w-full bg-birdLightGray", styles.bgContainer)}>
         <div
           className={clsx(
-            "w-full max-w-[1120px] mx-auto px-10 pt-20 pb-[160px] flex flex-col gap-3"
+            "w-full max-w-[1120px] mx-auto pt-10 px-5 pb-[60px] flex flex-col gap-3",
+            "md:px-10 md:pt-20 md:pb-[160px]"
           )}
         >
           {faqData.map((item: FaqTypes, index: number) => (
@@ -160,12 +163,21 @@ const FAQPage = () => {
               )}
               style={{
                 maxHeight: checkIsExpanded(item.id)
-                  ? `${104 + itemsRef?.current[index]?.clientHeight}px`
-                  : "80px"
+                  ? `${
+                      questionsRef?.current[index]?.clientHeight +
+                      answersRef?.current[index]?.clientHeight +
+                      68
+                    }px`
+                  : `${
+                      (questionsRef?.current[index]?.clientHeight || 32) + 48
+                    }px`
               }}
               onClick={() => handleSelectId(item.id)}
             >
-              <p className="text-2xl font-semibold flex justify-between">
+              <p
+                ref={(el) => (questionsRef.current[index] = el)}
+                className="text-2xl font-semibold flex justify-between"
+              >
                 {item.question}
                 <Image
                   src={checkIsExpanded(item.id) ? iconMinus : iconPlus}
@@ -173,7 +185,7 @@ const FAQPage = () => {
                 />
               </p>
               <div
-                ref={(el) => (itemsRef.current[index] = el)}
+                ref={(el) => (answersRef.current[index] = el)}
                 className={"text-lg opacity-80 mt-5 whitespace-pre-line"}
               >
                 {item.answer}

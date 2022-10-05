@@ -12,4 +12,8 @@
   min-height: 480px;
   background: url("/images/bg-birdnest.png") no-repeat center;
   background-size: cover;
+  @media (max-width: theme("screens.xs")) {
+    background: url("/images/bg-birdnest-xs.png") no-repeat center;
+    background-size: cover;
+  }
 }

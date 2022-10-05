@@ -7,6 +7,7 @@ import iconMenu from "/public/images/icon-menu.svg"
 import iconClose from "/public/images/icon-close.svg"
 import logo from "/public/images/logo-text.svg"
 import { SocialItemTypes, socialsData } from "../../../utils/constants"
+import { useRouter } from "next/router"
 
 type RouteTypes = {
   label: string
@@ -33,6 +34,7 @@ const routes: Array<RouteTypes> = [
 ]
 
 const HeaderDefaultLayout = () => {
+  const { asPath } = useRouter()
   const [open, setOpen] = useState<boolean>(false)
 
   const handleOpenHeader = () => {
@@ -56,7 +58,14 @@ const HeaderDefaultLayout = () => {
         <div className="flex flex-col gap-6 text-white justify-center w-full text-center text-lg font-semibold mt-10">
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
-              <a target="_blank">{item.label}</a>
+              <a
+                target="_blank"
+                className={clsx("hover:tracking-wider duration-500", {
+                  "text-main": asPath === item.uri
+                })}
+              >
+                {item.label}
+              </a>
             </Link>
           ))}
         </div>
@@ -65,11 +74,7 @@ const HeaderDefaultLayout = () => {
         </p>
         <div className="flex gap-3 mt-4 w-full justify-center">
           {socialsData.map((item: SocialItemTypes, index: number) => (
-            <a
-              href={item.url}
-              className={clsx("w-10 h-10")}
-              key={index + 1000}
-            >
+            <a href={item.url} className={clsx("w-10 h-10")} key={index + 1000}>
               <Image src={item.img} alt="" layout="fixed" />
             </a>
           ))}
@@ -102,7 +107,14 @@ const HeaderDefaultLayout = () => {
         <div className={clsx("gap-5 hidden", "md:flex")}>
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
-              <a target="_blank">{item.label}</a>
+              <a
+                target="_blank"
+                className={clsx("hover:tracking-wider duration-500", {
+                  "text-main": asPath === item.uri
+                })}
+              >
+                {item.label}
+              </a>
             </Link>
           ))}
         </div>

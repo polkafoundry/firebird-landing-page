@@ -45,8 +45,8 @@ const BirdNest = () => {
         >
           <div
             className={clsx(
-              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
-              "md:pr-5"
+              "flex flex-col max-w-[440px] justify-center items-center text-center",
+              "md:pr-5 md:text-left"
             )}
           >
             <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
