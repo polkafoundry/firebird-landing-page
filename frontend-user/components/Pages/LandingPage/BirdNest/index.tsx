@@ -78,7 +78,7 @@ const BirdNest = () => {
         <div
           className={clsx(
             "flex justify-between items-center flex-col-reverse gap-3 pr-0 mt-[60px]",
-            "md:gap-0 md:flex-row md:pr-10 md:mt-20"
+            "md:gap-0 md:flex-row-reverse md:pr-10 md:mt-20"
           )}
         >
           <div

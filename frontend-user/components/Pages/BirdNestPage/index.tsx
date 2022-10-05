@@ -76,13 +76,13 @@ const BirdNestPage = () => {
           <div
             className={clsx(
               "flex flex-col-reverse justify-between px-5 py-8 mt-5 bg-white rounded-[32px]",
-              "md:flex-row md:px-[60px] md:py-[60px] md:mt-8"
+              "md:flex-row-reverse md:px-[60px] md:py-[60px] md:mt-8"
             )}
           >
             <div
               className={clsx(
                 "flex flex-col max-w-[440px] justify-center items-center text-center",
-                "md:pr-5 md:text-left"
+                "md:pl-5 md:text-left"
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
