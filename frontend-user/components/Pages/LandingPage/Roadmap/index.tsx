@@ -59,7 +59,7 @@ const roadmapData: Array<RoadmapItemTypes> = [
 ]
 
 const Roadmap = () => {
-  console.log(roadmapData)
+  // console.log(roadmapData)
 
   return (
     <div className="w-full bg-black text-white">
@@ -69,13 +69,13 @@ const Roadmap = () => {
             Roadmap
           </p>
 
-          {/* <div className="flex w-full">
+          <div className="flex w-full">
             <ul className="">
               {roadmapData.map((item: RoadmapItemTypes) => (
                 <li key={item.id}></li>
               ))}
             </ul>
-          </div> */}
+          </div>
 
           <div className="relative hidden md:block">
             <Image src={imgRoadmap} alt="" />

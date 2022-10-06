@@ -47,7 +47,7 @@ const BirdNestPage = () => {
             <div
               className={clsx(
                 "flex flex-col max-w-[440px] justify-center items-center text-center",
-                "md:pr-5 md:text-left"
+                "md:pr-5 md:text-left md:items-start"
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
@@ -85,7 +85,7 @@ const BirdNestPage = () => {
             <div
               className={clsx(
                 "flex flex-col max-w-[440px] justify-center items-center text-center",
-                "md:pl-5 md:text-left"
+                "md:pl-5 md:text-left md:items-start"
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
@@ -140,7 +140,7 @@ const BirdNestPage = () => {
             <div
               className={clsx(
                 "flex flex-col max-w-[440px] justify-center items-center text-center",
-                "md:pr-5 md:text-left"
+                "md:pr-5 md:text-left md:items-start"
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
