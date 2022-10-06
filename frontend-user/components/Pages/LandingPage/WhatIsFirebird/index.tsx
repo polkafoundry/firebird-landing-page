@@ -18,23 +18,18 @@ const WhatIsFirebird = () => {
         <div className="flex flex-col text-center md:text-left">
           {" "}
           <span className="text-main uppercase font-semibold font-birdMedium tracking-wider text-sm md:text-base">{`What's Firebird?`}</span>
-          <p className="font-semibold max-w-[720px] w-full text-3xl xs:text-5xl md:text-4xl">
+          <p
+            className="font-semibold max-w-[720px] w-full text-3xl xs:text-5xl md:text-4xl"
+            data-aos="fade-up"
+          >
             Firebird is the optimized chain that allows{" "}
             <span className="bg-black text-white rounded-md px-1">
               Gaming & Metaverse
             </span>{" "}
             developers to create{" "}
-            <span
-              className="bg-main text-white rounded-md px-1"
-              data-aos="fade-up"
-            >
-              scalable
-            </span>{" "}
+            <span className="bg-main text-white rounded-md px-1">scalable</span>{" "}
             and{" "}
-            <span
-              className="bg-main text-white rounded-md px-1"
-              data-aos="fade-up"
-            >
+            <span className="bg-main text-white rounded-md px-1">
               user-friendly
             </span>{" "}
             realtime Dapps with near zero costs while never compromising

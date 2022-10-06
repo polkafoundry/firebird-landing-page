@@ -1,8 +1,9 @@
 import clsx from "clsx"
 import Image from "next/image"
-import styles from "../landing.module.scss"
-import imgRoadmap from "/public/images/roadmap.svg"
-import imgRoadmapXs from "/public/images/roadmap-xs.svg"
+import { useEffect, useRef, useState } from "react"
+import landingStyles from "../landing.module.scss"
+import styles from "./roadmap.module.scss"
+import iconCheck from "/public/images/icon-check.svg"
 
 type RoadmapItemTypes = {
   id: string
@@ -59,29 +60,78 @@ const roadmapData: Array<RoadmapItemTypes> = [
 ]
 
 const Roadmap = () => {
-  // console.log(roadmapData)
+  const clientRef = useRef<any>()
+  const [progressWidth, setProgressWidth] = useState<number>(0)
+
+  useEffect(() => {
+    const getProgressWidth = () => {
+      let checkedCount =
+        roadmapData.map((item) => item.checked).lastIndexOf(true) + 1
+      return clientRef.current
+        ? (clientRef.current?.clientWidth / 4 + 1) * checkedCount
+        : 0
+    }
+    setProgressWidth(getProgressWidth())
+
+    window.addEventListener("resize", () => {
+      console.log(window.innerHeight, window.innerWidth)
+      setProgressWidth(getProgressWidth())
+    })
+  }, [])
 
   return (
     <div className="w-full bg-black text-white">
-      <div className={clsx(styles.section, "px-[100px] pt-20 pb-[68px]")}>
+      <div
+        className={clsx(landingStyles.section, "px-[100px] pt-20 pb-[68px]")}
+      >
         <div className="flex flex-col w-full">
           <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
             Roadmap
           </p>
 
-          <div className="flex w-full">
-            <ul className="">
-              {roadmapData.map((item: RoadmapItemTypes) => (
-                <li key={item.id}></li>
+          <div className="flex w-full relative">
+            <span
+              className={clsx(styles.progress)}
+              style={{ width: progressWidth }}
+            ></span>
+            <ul
+              className={styles.roadMapSteps}
+              ref={(el) => (clientRef.current = el)}
+            >
+              {roadmapData.map((roadmap: RoadmapItemTypes) => (
+                <li
+                  key={roadmap.id}
+                  className={clsx(
+                    "flex w-auto bg-[#1f1f1f] h-fit rounded-3xl px-5 mr-8 pt-8 pb-6 border-2 border-[#ffffff1f] relative",
+                    roadmap.checked ? styles.stepActived : ""
+                  )}
+                >
+                  <div className="flex flex-col text-white absolute -top-[82px] left-0 h-[44px] justify-between">
+                    <span className="text-base font-bold font-birdBold">
+                      {roadmap.label}
+                    </span>
+                    <span className="h-3 w-[2px] bg-[#ffffff52]"></span>
+                  </div>
+
+                  <ul className="flex flex-col gap-2 list-disc pl-5">
+                    {roadmap.details.map((item: string, index: number) => (
+                      <li
+                        className="text-base"
+                        key={index + 100}
+                        data-aos="fade-up"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  {roadmap.checked && (
+                    <div className="absolute top-3 right-8">
+                      <Image src={iconCheck} alt="" layout="fixed" />
+                    </div>
+                  )}
+                </li>
               ))}
             </ul>
-          </div>
-
-          <div className="relative hidden md:block">
-            <Image src={imgRoadmap} alt="" />
-          </div>
-          <div className="relative md:hidden flex justify-center">
-            <Image src={imgRoadmapXs} alt="" />
           </div>
         </div>
       </div>

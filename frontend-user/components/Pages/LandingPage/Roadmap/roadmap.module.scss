@@ -1,0 +1,61 @@
+.roadMapSteps {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 80px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 44px;
+    left: 0;
+    height: 13px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2) 68.71%,
+      rgba(255, 255, 255, 0) 105.54%
+    );
+  }
+}
+.progress {
+  position: absolute;
+  content: "";
+  top: 44px;
+  left: 0;
+  height: 13px;
+  background: linear-gradient(90deg, #934ddf -17.67%, #e3704c 100%);
+}
+
+.stepActived {
+  background: linear-gradient(180deg, #914be1 0%, #e57146 100%);
+  border: none;
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  position: relative;
+  box-sizing: border-box;
+  &::before {
+    content: "";
+    width: 100%;
+    height: calc(100%);
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    z-index: -1;
+    // background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(
+        235.66deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.048) 70.29%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.12),
+        rgba(255, 255, 255, 0.12)
+      );
+  }
+}
