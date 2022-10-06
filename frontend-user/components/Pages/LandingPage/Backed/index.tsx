@@ -1,38 +1,72 @@
 import clsx from "clsx"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import landingStyles from "../landing.module.scss"
 import styles from "./backed.module.scss"
 
+import logoAspo from "/public/images/partners/aspo.png"
+import logoEvermoon from "/public/images/partners/evermoon.png"
+import logoF2C from "/public/images/partners/f2c.png"
+import logoGunstar from "/public/images/partners/gunstar.png"
+import logoMasterWar from "/public/images/partners/master-war.png"
+import logoMonsterra from "/public/images/partners/monsterra.png"
+import logoNFTTrade from "/public/images/partners/nft-trade.png"
+import logoPlanetSandbox from "/public/images/partners/planet-sanbox.png"
+
 type PartnerTypes = {
   name: string
-  image: string
+  image: StaticImageData
   uri: string
 }
 
-const fakeGamefi: PartnerTypes = {
-  image: "/images/gamefi.svg",
-  name: "Gamefi.org",
-  uri: "https://gamefi.org/"
-}
-const fakePolygon: PartnerTypes = {
-  image: "/images/polygon.svg",
-  name: "Polygon",
-  uri: "https://polygon.technology/"
-}
-
-const partners: Array<PartnerTypes> = []
-for (let i = 0; i < 18; i++) {
-  partners.push(i % 2 === 0 ? fakeGamefi : fakePolygon)
-}
+const partners: Array<PartnerTypes> = [
+  {
+    image: logoAspo,
+    name: "Aspo",
+    uri: "https://aspo.world/"
+  },
+  {
+    image: logoGunstar,
+    name: "Gunstar",
+    uri: "https://gunstar.io/"
+  },
+  {
+    image: logoMonsterra,
+    name: "Monsterra",
+    uri: "https://monsterra.io/"
+  },
+  {
+    image: logoPlanetSandbox,
+    name: "Planet Sandbox",
+    uri: "https://planetsandbox.io/"
+  },
+  {
+    image: logoNFTTrade,
+    name: "NFTTrade",
+    uri: "https://nftrade.com/"
+  },
+  {
+    image: logoMasterWar,
+    name: "My master war",
+    uri: "https://mymasterwar.com/"
+  },
+  {
+    image: logoEvermoon,
+    name: "Evermoon",
+    uri: "https://www.evermoon.games/"
+  },
+  {
+    image: logoF2C,
+    name: "F2C",
+    uri: "https://f2nft.games/"
+  }
+]
 
 const Backed = () => {
   return (
     <div className={styles.bgBacked}>
-      <div className={clsx(landingStyles.section, "px-[138px] pt-20")}>
+      <div className={clsx(landingStyles.section, "px-5 md:px-[138px] pt-20")}>
         <div className="flex flex-col justify-center">
-          <p className="text-4xl font-semibold text-center w-full">
-            Backed by
-          </p>
+          <p className="text-4xl font-semibold text-center w-full">Backed by</p>
           <a
             href="https://icetea.io/"
             target="_blank"
@@ -51,7 +85,11 @@ const Backed = () => {
             <p className="text-center text-xl font-semibold">Icetea Labs</p>
           </a>
 
-          <p className="mt-20 text-center font-semibold text-4xl max-w-[980px] mx-auto">
+          <p className="md:hidden mt-20 text-center font-semibold text-4xl">
+            Our partners
+          </p>
+
+          <p className="mt-20 text-center font-semibold text-4xl max-w-[980px] mx-auto hidden md:block">
             <span className="bg-main text-white px-1 rounded-md">
               Our partners
             </span>{" "}
@@ -59,23 +97,30 @@ const Backed = () => {
             and benefits.
           </p>
 
-          <div className="w-full flex flex-wrap gap-3 mt-7 justify-center">
+          <div
+            className={clsx(
+              "w-full grid grid-cols-2 gap-3 mt-7 justify-center",
+              "xs:flex xs:flex-wrap"
+            )}
+          >
             {partners.map((item: PartnerTypes, index: number) => (
               <a
                 key={index + 1000}
                 href={item.uri}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-white rounded-[32px] w-[184px] flex flex-col justify-center items-center pt-9 pb-7"
+                className={clsx(
+                  "bg-white rounded-[32px] pt-7 pb-5 flex flex-col justify-center items-center",
+                  "xs:w-[184px] xs:pt-9 xs:pb-7"
+                )}
               >
-                <div className="relative max-w-[80px]">
-                  <Image
-                    src={item.image}
-                    alt=""
-                    width={80}
-                    height={80}
-                    layout="fixed"
-                  />
+                <div
+                  className={clsx(
+                    "relative w-[68px] h-[68px]",
+                    "xs:w-20 xs:h-20"
+                  )}
+                >
+                  <Image src={item.image} alt="" />
                 </div>
                 <p className="font-semibold mt-1">{item.name}</p>
               </a>

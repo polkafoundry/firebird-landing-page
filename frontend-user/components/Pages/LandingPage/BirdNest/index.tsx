@@ -17,7 +17,8 @@ const BirdNest = () => {
       <div
         className={clsx(
           landingStyles.section,
-          "px-5 md:px-[120px] pt-[120px] pb-[160px] flex flex-col"
+          "px-5 py-[60px] flex flex-col",
+          "md:px-[120px] md:pt-[120px] md:pb-[160px]"
         )}
       >
         <p
