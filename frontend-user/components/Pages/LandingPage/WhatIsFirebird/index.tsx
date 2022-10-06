@@ -24,12 +24,21 @@ const WhatIsFirebird = () => {
               Gaming & Metaverse
             </span>{" "}
             developers to create{" "}
-            <span className="bg-main text-white rounded-md px-1">scalable</span>{" "}
+            <span
+              className="bg-main text-white rounded-md px-1"
+              data-aos="fade-up"
+            >
+              scalable
+            </span>{" "}
             and{" "}
-            <span className="bg-main text-white rounded-md px-1">
+            <span
+              className="bg-main text-white rounded-md px-1"
+              data-aos="fade-up"
+            >
               user-friendly
             </span>{" "}
-            realtime Dapps with near zero costs while never compromising security
+            realtime Dapps with near zero costs while never compromising
+            security
           </p>
         </div>
 

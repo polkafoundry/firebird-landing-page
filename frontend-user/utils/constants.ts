@@ -22,8 +22,8 @@ export const socialsData: Array<SocialItemTypes> = [
     img: iconTwitter,
     imgHover: iconTwitterHover,
     label: "Official Twitter",
-    url: "https://twitter.com/firebird",
-    username: "@Firebird"
+    url: "https://twitter.com/Firebirdchain",
+    username: "@Firebirdchain"
   },
   {
     img: iconGithub,
@@ -57,7 +57,7 @@ export const socialsData: Array<SocialItemTypes> = [
     img: iconTelegram,
     imgHover: iconTelegramHover,
     label: "Telegram Group",
-    url: "https://t.me/Firebird",
-    username: "@Firebird"
+    url: "https://t.me/Firebird_en",
+    username: "@Firebird_en"
   }
 ]

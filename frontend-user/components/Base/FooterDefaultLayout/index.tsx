@@ -15,7 +15,7 @@ const buyPkfExchanges = [
   },
   {
     name: "Gate.io",
-    url: "https://www.gate.io/vi/trade/pkf_usdt"
+    url: "https://www.gate.io/trade/pkf_usdt"
   },
   {
     name: "Kucoin",
