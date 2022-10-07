@@ -82,7 +82,11 @@ const Roadmap = () => {
   return (
     <div className="w-full bg-black text-white">
       <div
-        className={clsx(landingStyles.section, "px-[100px] pt-20 pb-[68px]")}
+        className={clsx(
+          landingStyles.section,
+          "px-8 py-[60px]",
+          "md:px-[100px] md:pt-20 md:pb-[68px]"
+        )}
       >
         <div className="flex flex-col w-full">
           <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
@@ -91,7 +95,7 @@ const Roadmap = () => {
 
           <div className="flex w-full relative">
             <span
-              className={clsx(styles.progress)}
+              className={clsx(styles.progress, "md:block hidden")}
               style={{ width: progressWidth }}
             ></span>
             <ul
@@ -106,7 +110,12 @@ const Roadmap = () => {
                     roadmap.checked ? styles.stepActived : ""
                   )}
                 >
-                  <div className="flex flex-col text-white absolute -top-[82px] left-0 h-[44px] justify-between">
+                  <div
+                    className={clsx(
+                      "flex flex-col text-white absolute  justify-between",
+                      "md:-top-[82px] md:left-0 md:h-[44px]"
+                    )}
+                  >
                     <span className="text-base font-bold font-birdBold">
                       {roadmap.label}
                     </span>

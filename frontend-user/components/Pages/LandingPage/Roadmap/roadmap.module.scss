@@ -19,6 +19,20 @@
     );
   }
 }
+@media (max-width: theme("screens.xs")) {
+  .roadMapSteps {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    padding-left: 20px;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
+    }
+  }
+}
 .progress {
   position: absolute;
   content: "";
