@@ -35,7 +35,8 @@ const BirdNest = () => {
             "md:text-base"
           )}
         >
-          Enhance your next hassle-free and user-friendly NFT gaming & metaverse with Firebird.
+          Enhance your next hassle-free and user-friendly NFT gaming & metaverse
+          with Firebird.
         </p>
 
         <div
@@ -93,8 +94,8 @@ const BirdNest = () => {
             </p>
             <span className="mt-4">
               {`An optimal space designed for developers. Let's start
-              investigating technological architecture and implementing your
-              blockchain ideas at Firebird Developer Hub.`}
+                delving deeper into the technological architecture and pitching
+                in your blockchain ideas at Firebird Developer Hub.`}
             </span>
             <div className="flex mt-7 gap-2">
               <ButtonLink
