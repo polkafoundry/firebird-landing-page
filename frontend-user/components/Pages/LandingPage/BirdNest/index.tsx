@@ -35,7 +35,7 @@ const BirdNest = () => {
             "md:text-base"
           )}
         >
-          Unlock the door to the Firebird world
+          Unlock the door to the Firebird world.
         </p>
 
         <div
@@ -92,7 +92,7 @@ const BirdNest = () => {
               Developer Hub
             </p>
             <span className="mt-4">
-              {`An optimal space is designed for developers. Let's start
+              {`An optimal space designed for developers. Let's start
               investigating technological architecture and implementing your
               blockchain ideas at Firebird Developer Hub.`}
             </span>
@@ -141,8 +141,9 @@ const BirdNest = () => {
             </p>
             <span className="mt-4">
               Dive into the Firebird ecosystem to learn more about the
-              platform’s features, solutions, infrastructure, roadmap, etc., and
-              understand why we started building Firebird.
+              platform’s features, solutions, infrastructure, roadmap, etc.
+              Understand from A-Z about us, including the motivation behind
+              building Firebird.
             </span>
             <div className="flex mt-7">
               <ButtonLink

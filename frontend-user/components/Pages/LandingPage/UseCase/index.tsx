@@ -48,7 +48,8 @@ const UseCase = () => {
       <div className="flex flex-col md:flex-row w-full gap-14 items-center">
         <div className="flex flex-col w-full max-w-[420px] items-center">
           <p className="text-3xl md:text-4xl max-w-[980px] font-semibold mt-2">
-            Develop your blockchain ideas on the potential platform
+            Converting your blockchain ideas to reality with our potential
+            platform
           </p>
           <span className="mt-5 text-lg">
             Firebird offers you the flexibility, security, reliability, and

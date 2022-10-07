@@ -24,7 +24,7 @@ const WhatIsFirebird = () => {
           >
             Firebird is the optimized chain that allows{" "}
             <span className="bg-black text-white rounded-md px-1">
-              Gaming & Metaverse
+              GameFi & Metaverse
             </span>{" "}
             developers to create{" "}
             <span className="bg-main text-white rounded-md px-1">scalable</span>{" "}

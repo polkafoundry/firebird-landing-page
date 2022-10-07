@@ -31,8 +31,8 @@ const LandingPage = () => {
             className="mt-5 text-lg md:text-3xl font-birdMedium max-w-[640px] mx-auto"
             data-aos="fade-up"
           >
-            Enhance your next hassle-free and user-friendly NFT gaming &
-            metaverse with Firebird
+            Develop/ Build the next hassle-free and user-friendly NFT gaming &
+            metaverse with Firebird.
           </p>
         </div>
       </div>

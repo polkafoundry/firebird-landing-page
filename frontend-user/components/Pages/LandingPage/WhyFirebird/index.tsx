@@ -13,7 +13,7 @@ const features: Array<FeatureTypes> = [
     title: "Fast and Effective",
     image: "/images/features-fast-effective.png",
     detail:
-      "Firebird has the capacity to execute a huge number of transactions per second and guarantee immediate transaction finality at a near-zero fee."
+      "Firebird has the capacity to execute a huge number of transactions per second and guarantee immediate transaction finality, cost-effectively."
   },
   {
     title: "UX enabling features",
@@ -31,13 +31,13 @@ const features: Array<FeatureTypes> = [
     title: "Layer 2 ",
     image: "/images/features-layer-2.png",
     detail:
-      "Firebird solves scalability problems by utilizing Layer 2 solutions for lower transaction fees, higher speed, and more security."
+      "Firebird solves scalability problems by utilizing Layer 2 solutions for lower transaction fees, higher speed, and enhanced/greater security."
   },
   {
     title: "Compliance",
     image: "/images/features-compliance.png",
     detail:
-      "Provide an anti-cheat mechanism and security detection to keep players from hacking or cheating and to ensure game fairness. "
+      "Provide an anti-cheat mechanism and security detection to keep players from hacking or cheating and to ensure game fairness."
   }
 ]
 
@@ -60,8 +60,8 @@ const WhyFirebird = () => {
             "text-3xl text-center px-3 max-w-[980px] mx-auto font-semibold mt-2"
           )}
         >
-          Overcome challenges in blockchain gaming with powerful and efficient
-          features
+          Overcome challenges in building and playing blockchain gaming with
+          powerful and efficient features
         </p>
 
         <div className="flex flex-wrap justify-center gap-[19px] mt-7">

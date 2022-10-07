@@ -121,7 +121,7 @@ const FAQPage = () => {
             How can we help you?
           </p>
           <p className="text-lg md:text-2xl md:leading-8 font-birdMedium mx-auto">
-            Find answers to the questions we receive the most frequently here
+            Find answers to the questions we receive the most frequently here.
           </p>
 
           <div
