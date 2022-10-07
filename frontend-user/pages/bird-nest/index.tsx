@@ -5,15 +5,10 @@ import BirdNestPage from "../../components/Pages/BirdNestPage"
 const BirdNest = () => {
   return (
     <>
-      <Head>
-        <title>Firebird Nest</title>
-        <meta
-          name="description"
-          content="Unlock the door to the Firebird World"
-        />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
-      <DefaultLayout>
+      <DefaultLayout
+        title="Firebird Bird Nest"
+        description="Unlock the door to the Firebird World, where you can find Firebird-related news, blogs, developement hub and documentations."
+      >
         <BirdNestPage />
       </DefaultLayout>
     </>
