@@ -1,0 +1,32 @@
+.progress {
+  background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
+  width: 8px;
+}
+
+.stepActived {
+  background: linear-gradient(180deg, #914be1 0%, #e57146 100%);
+  border: none;
+
+  & > div {
+    background: linear-gradient(
+        235.66deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.048) 70.29%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.12),
+        rgba(255, 255, 255, 0.12)
+      );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    transform: translateX(-15px) translateY(-12px);
+    padding: 20px 17px;
+  }
+}
+
+.connectLine {
+  display: inline-block;
+  position: absolute;
+  transform: rotate(90deg);
+}

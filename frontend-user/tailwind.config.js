@@ -8,29 +8,29 @@ delete colors.blueGray
 
 module.exports = {
   content: [
-    "./utils/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './utils/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     screens: {
-      xs: "640px",
-      sm: "768px",
-      md: "900px",
-      lg: "1200px",
-      xl: "1368px",
-      "2xl": "1536px",
-      main: "1440px"
+      xs: '640px',
+      sm: '768px',
+      md: '900px',
+      lg: '1200px',
+      xl: '1368px',
+      '2xl': '1536px',
+      main: '1440px'
     },
     colors: {
-      main: "#EB522F",
-      birdGray: "#747474",
-      birdLightGray: "#f7f7f8",
-      birdPurple: "#6B2FEB",
-      birdGreen: "#00CE5F",
-      birdOrange: "#FB7800",
-      birdRed: "#EB522F",
-      birdBlue: "#2F91EB",
+      main: '#EB522F',
+      birdGray: '#747474',
+      birdLightGray: '#f7f7f8',
+      birdPurple: '#6B2FEB',
+      birdGreen: '#00CE5F',
+      birdOrange: '#FB7800',
+      birdRed: '#EB522F',
+      birdBlue: '#2F91EB',
       ...colors
     },
     fontSize: {
@@ -47,15 +47,16 @@ module.exports = {
       '7xl': ['5rem', { lineHeight: '6.25rem' }], // 80px/100px
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
-      '22px': ['22px', { lineHeight: '36px' }],
-      '10px': ['10px', { lineHeight: '14px' }]
+      '10px': ['10px', { lineHeight: '14px' }],
+      '16px': ['16px', { lineHeight: '20px' }],
+      '22px': ['22px', { lineHeight: '36px' }]
     },
 
     fontFamily: {
-      'birdMedium': ['TTHoves Medium'],
-      'birdBold': ['TTHoves Bold'],
+      birdMedium: ['TTHoves Medium'],
+      birdBold: ['TTHoves Bold']
     },
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
