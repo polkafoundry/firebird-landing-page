@@ -35,7 +35,7 @@ const BirdNest = () => {
             "md:text-base"
           )}
         >
-          Unlock the door to the Firebird world.
+          Enhance your next hassle-free and user-friendly NFT gaming & metaverse with Firebird.
         </p>
 
         <div

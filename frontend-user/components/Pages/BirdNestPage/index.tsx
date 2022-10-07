@@ -25,7 +25,8 @@ const BirdNestPage = () => {
             Bird Nest
           </p>
           <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
-            Unlock the door to the Firebird World.
+            Enhance your next hassle-free and user-friendly NFT gaming &
+            metaverse with Firebird.
           </p>
         </div>
       </div>
