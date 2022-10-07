@@ -1,6 +1,14 @@
+.roadMapSteps {
+  //   &::before {
+  //     content: "";
+  //     background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
+  //     height: 8px;
+  //     width: 100%;
+  //   }
+}
+
 .progress {
   background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
-  width: 8px;
 }
 
 .stepActived {
@@ -22,11 +30,32 @@
     border: 2px solid rgba(255, 255, 255, 0.12);
     transform: translateX(-15px) translateY(-12px);
     padding: 20px 17px;
+
+    @media (min-width: theme("screens.md")) {
+      padding: 20px 70px 30px 70px;
+      max-width: 295px;
+      left: 50%;
+      top: calc(100% + 2px);
+    }
   }
 }
 
 .connectLine {
   display: inline-block;
   position: absolute;
-  transform: rotate(90deg);
+  @media (min-width: theme("screens.md")) {
+    left: 50%;
+    top: calc(100% + 2px);
+  }
+}
+
+.connectLineBelow {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 2px);
+}
+
+.activeTitle {
+  left: calc(100% + 82px);
 }
