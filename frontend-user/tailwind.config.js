@@ -50,7 +50,9 @@ module.exports = {
       "10px": ["10px", { lineHeight: "14px" }],
       "14px": ["14px", { lineHeight: "20px" }],
       "16px": ["16px", { lineHeight: "20px" }],
-      "22px": ["22px", { lineHeight: "36px" }]
+      "20px": ["20px", { lineHeight: "28px" }],
+      "22px": ["22px", { lineHeight: "36px" }],
+      "32px": ["32px", { lineHeight: "40px" }]
     },
 
     fontFamily: {

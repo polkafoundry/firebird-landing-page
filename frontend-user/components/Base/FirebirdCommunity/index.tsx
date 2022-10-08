@@ -10,26 +10,30 @@ const FirebirdCommunity = () => {
   return (
     <div
       className={clsx(
-        "flex flex-col w-full text-white rounded-[20px] pb-10 pt-[60px] px-5 bg-[url('/images/bg-community-landing-xs.svg')] bg-no-repeat bg-cover",
-        "md:gap-5 md:flex-row md:pl-20 md:pr-[60px] md:pt-16 md:pb-11 md:bg-[url('/images/bg-community-landing.svg')] md:bg-no-repeat md:bg-cover"
+        "flex flex-col w-full text-white rounded-[20px] pb-10 pt-[60px] px-5 bg-[url('/images/bg-community-landing-xs.svg')] bg-no-repeat bg-cover bg-center",
+        "xs:px-[60px] xs:bg-center",
+        "lg:gap-5 lg:flex-row md:pl-20 md:pr-[60px] md:pt-16 md:pb-11 md:bg-[url('/images/bg-community-landing.svg')] md:bg-no-repeat md:bg-cover md:bg-inherit"
       )}
     >
       <div
         className={clsx(
           "flex flex-col-reverse max-w-[480px] items-center text-center mx-auto",
-          "md:flex-col md:items-start md:text-left md:mx-0"
+          "lg:flex-col lg:items-start lg:text-left lg:mx-0"
         )}
       >
-        <p className="text-3xl md:text-[44px] md:leading-[54px] font-semibold">
+        <p className="text-3xl xs:text-5xl md:text-[44px] md:leading-[54px] font-semibold">
           Find your place in the Firebird Community
         </p>
-        <div className="relative md:mt-10" data-aos="zoom-in">
+        <div
+          className="relative block sm:hidden lg:block md:mt-10"
+          data-aos="zoom-in"
+        >
           <Image src={imgBell} alt="" />
         </div>
       </div>
 
       <div className="flex flex-col pt-3">
-        <p className="text-sm md:text-lg text-center md:text-left">
+        <p className="text-sm xs:text-22px md:text-lg text-center md:text-left">
           {`Need more information about Firebird? Follow us on Firebird’s official
           groups and channels so you won’t miss anything!`}
         </p>
@@ -37,7 +41,7 @@ const FirebirdCommunity = () => {
         <div
           className={clsx(
             "grid grid-cols-1 gap-2 text-white mt-10",
-            "md:grid-cols-2 md:gap-3"
+            "sm:grid-cols-2 sm:gap-3"
           )}
         >
           {socialsData.map((item: SocialItemTypes, index: number) => (

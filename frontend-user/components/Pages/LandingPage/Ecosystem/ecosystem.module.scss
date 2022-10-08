@@ -22,11 +22,14 @@
     transform: translateX(-15px) translateY(-12px);
     padding: 20px 17px;
 
-    @media (min-width: theme("screens.md")) {
+    @media (min-width: theme("screens.lg")) {
       padding: 20px 70px 30px 70px;
-      max-width: 295px;
       left: 50%;
       top: calc(100% + 2px);
+      max-width: 230px;
+    }
+    @media (min-width: theme("screens.xl")) {
+      max-width: 295px;
     }
   }
 }
@@ -48,5 +51,8 @@
 }
 
 .activeTitle {
-  left: calc(100% + 82px);
+  left: calc(100% + 52px);
+  @media (min-width: theme("screens.lg")) {
+    left: calc(100% + 82px);
+  }
 }

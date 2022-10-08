@@ -11,6 +11,14 @@ import birdnestDocumentation from "/public/images/birdnest-documentation.png"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
 
+const componentStyles = {
+  titleBox:
+    "flex flex-col max-w-[440px] justify-center items-center text-center",
+  title: "text-3xl xs:text-4xl font-semibold font-birdMedium",
+  description: "mt-3 text-sm xs:text-22px md:mt-4 md:text-base",
+  button: "flex mt-3 xs:mt-8 md:mt-7"
+}
+
 const BirdNest = () => {
   return (
     <div className={styles.bgBirdNest}>
@@ -18,7 +26,8 @@ const BirdNest = () => {
         className={clsx(
           landingStyles.section,
           "px-5 py-[60px] flex flex-col",
-          "md:px-[120px] md:pt-[120px] md:pb-[160px]"
+          "xs:px-[120px] xs:pt-[80px] xs:pb-[120px]",
+          "md:pt-[120px] md:pb-[160px]"
         )}
       >
         <p
@@ -46,19 +55,18 @@ const BirdNest = () => {
         >
           <div
             className={clsx(
-              "flex flex-col max-w-[440px] justify-center items-center text-center",
-              "md:pr-5 md:text-left md:items-start"
+              componentStyles.titleBox,
+              "xs:max-w-[600px]",
+              "md:pr-5 md:text-left md:items-start md:max-w-[440px]"
             )}
           >
-            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
-              The Firebird Blog
-            </p>
-            <span className="mt-4">
+            <p className={componentStyles.title}>The Firebird Blog</p>
+            <span className={componentStyles.description}>
               Where you can discover Firebird-related news, including updates,
               research, analytics, events, partnerships, technological
               knowledge, etc.
             </span>
-            <div className="flex mt-7">
+            <div className={componentStyles.button}>
               <ButtonLink
                 href="https://firebird-techblog.netlify.app/"
                 target="_blank"
@@ -78,25 +86,25 @@ const BirdNest = () => {
 
         <div
           className={clsx(
-            "flex justify-between items-center flex-col-reverse gap-3 pr-0 mt-[60px]",
+            "flex justify-between items-center flex-col-reverse gap-6 pr-0 mt-20",
+            "xs:mt-[120px]",
             "md:gap-0 md:flex-row-reverse md:pr-10 md:mt-20"
           )}
         >
           <div
             className={clsx(
-              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
-              "md:pl-5 md:items-start"
+              componentStyles.titleBox,
+              "xs:max-w-[600px]",
+              "md:text-left md:pl-5 md:items-start md:max-w-[440px]"
             )}
           >
-            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
-              Developer Hub
-            </p>
-            <span className="mt-4">
-              {`An optimal space is designed for developers. Let's start
+            <p className={componentStyles.title}>Developer Hub</p>
+            <span className={componentStyles.description}>
+              An optimal space is designed for developers. Let's start
               investigating technological architecture and implementing your
-              blockchain ideas at Firebird Developer Hub.`}
+              blockchain ideas at Firebird Developer Hub.
             </span>
-            <div className="flex mt-7 gap-2">
+            <div className={clsx(componentStyles.button, "gap-2")}>
               <ButtonLink
                 href="https://github.com/"
                 target="_blank"
@@ -126,25 +134,25 @@ const BirdNest = () => {
 
         <div
           className={clsx(
-            "flex justify-between items-center flex-col-reverse gap-3 pl-0 mt-[60px]",
+            "flex justify-between items-center flex-col-reverse gap-3 pl-0 mt-20",
+            "xs:mt-[120px]",
             "md:gap-0 md:flex-row md:pl-10 md:mt-20"
           )}
         >
           <div
             className={clsx(
-              "flex flex-col max-w-[440px] justify-center items-center text-center md:text-left",
-              "md:pr-5 md:items-start"
+              componentStyles.titleBox,
+              "xs:max-w-[600px]",
+              "md:text-left md:pr-5 md:items-start md:max-w-[440px]"
             )}
           >
-            <p className="text-3xl md:text-4xl font-semibold font-birdMedium">
-              Firebird Documentation
-            </p>
-            <span className="mt-4">
+            <p className={componentStyles.title}>Firebird Documentation</p>
+            <span className={componentStyles.description}>
               Dive into the Firebird ecosystem to learn more about the
               platform’s features, solutions, infrastructure, roadmap, etc., and
               understand why we started building Firebird.
             </span>
-            <div className="flex mt-7">
+            <div className={componentStyles.button}>
               <ButtonLink
                 href="https://firebird-1.gitbook.io/firebird-whitepaper/"
                 target="_blank"

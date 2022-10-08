@@ -19,12 +19,12 @@
     );
   }
 }
-@media (max-width: theme("screens.xs")) {
+@media (max-width: theme("screens.md")) {
   .roadMapSteps {
     grid-template-columns: 1fr;
     padding-top: 29px;
     padding-left: 20px;
-    gap: 60px;
+    gap: 72px;
     &::before {
       top: 0;
       left: 0;
@@ -36,6 +36,12 @@
     }
   }
 }
+@media (max-width: theme("screens.xs")) {
+  .roadMapSteps {
+    gap: 60px;
+  }
+}
+
 .progress {
   position: absolute;
   content: "";

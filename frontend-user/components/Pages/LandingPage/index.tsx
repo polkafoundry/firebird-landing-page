@@ -28,7 +28,11 @@ const LandingPage = () => {
             Firebird
           </p>
           <p
-            className="mt-5 text-lg md:text-3xl font-birdMedium max-w-[640px] mx-auto"
+            className={clsx(
+              "mt-5 text-lg font-birdMedium max-w-[640px] mx-auto",
+              "xs:mt-8",
+              "md:text-3xl md:mt-5"
+            )}
             data-aos="fade-up"
           >
             Enhance your next hassle-free and user-friendly NFT gaming &

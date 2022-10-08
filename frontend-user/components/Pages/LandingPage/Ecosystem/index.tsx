@@ -34,7 +34,7 @@ const ecosystemData: Array<EcosystemItemTypes> = [
   },
   {
     id: "5",
-    label: "NFT sales"
+    label: "Game launch"
   },
   {
     id: "6",
@@ -57,61 +57,61 @@ const Ecosystem = () => {
       <div
         className={clsx(
           styles.section,
-          "px-10 py-[60px] md:px-[100px] md:py-20"
+          "px-10 py-[60px] lg:px-[100px] xs:py-20"
         )}
       >
         <div className="flex flex-col w-full md:px-[60px]">
           <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
             Join the Firebird ecosystem
           </span>
-          <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-2 mb-5 md:mb-10">
+          <p
+            className={clsx(
+              "text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-2 mb-5",
+              "xs:mt-3 xs:mb-10",
+              "md:mt-2"
+            )}
+          >
             Grow your project using the Firebird ecosystem's end-to-end
             infrastructure.
           </p>
 
           <div className={clsx("flex flex-row", "md:hidden")}>
-            <div
-              className={clsx(styles.progress, "w-2", "lg:w-full lg:h-2")}
-            ></div>
+            <div className={clsx(styles.progress, "w-2")}></div>
             <ul
               className={clsx(
                 styles.roadMapSteps,
-                "flex flex-1 flex-col gap-5",
-                "lg:flex-row"
+                "flex flex-1 flex-col gap-5"
               )}
             >
               {ecosystemData.map((item, index) => (
-                <li key={item.id}>
+                <li key={item.id} className="xs:relative">
                   <div
                     className={clsx(
                       boxStyles.md,
                       index === 1
                         ? `${styles.stepActived} ml-[27px] mt-3`
-                        : "py-5 px-4 ml-5",
-                      ""
+                        : "py-5 px-4 ml-3"
                     )}
                   >
                     {index === 1 ? (
-                      <div className="flex flex-col items-center rounded-3xl">
+                      <div className="flex flex-col items-center rounded-3xl xs:max-w-[260px]">
                         <div className="w-[101px]">
                           <Image src={item.image} layout="responsive" alt="" />
                         </div>
-                        <span className="mt-2 text-16px font-semibold">
+                        <span className={clsx("mt-2 text-16px font-semibold")}>
                           {item.label}
                         </span>
                         <span
                           className={clsx(
                             styles.connectLine,
-                            "h-3 w-[2px] bg-white opacity-[0.2] top-16 left-[-9px] rotate-90",
-                            "md:rotate-0"
+                            "h-3 w-[2px] bg-white opacity-[0.2] top-16 left-[-9px] rotate-90"
                           )}
                         ></span>
                       </div>
                     ) : (
                       <div
                         className={clsx(
-                          "flex flex-col text-white justify-between",
-                          "md:-top-[82px] md:left-0 "
+                          "flex flex-col text-white justify-between"
                         )}
                       >
                         <span className="text-base font-semibold ">
@@ -120,15 +120,21 @@ const Ecosystem = () => {
                         <span
                           className={clsx(
                             styles.connectLine,
-                            "h-3 w-[2px] bg-white opacity-[0.2] left-[-13px] rotate-90",
-                            "md:rotate-0"
+                            "h-3 w-[2px] bg-white opacity-[0.2] left-[-9px] rotate-90"
                           )}
                         ></span>
                       </div>
                     )}
                   </div>
                   {index === 1 && (
-                    <p className="ml-10 mt-3 text-sm">{item.description}</p>
+                    <p
+                      className={clsx(
+                        "ml-10 mt-3 text-sm left-[275px]",
+                        "xs:text-base sm:text-20px lg:text- xs:absolute xs:top-0"
+                      )}
+                    >
+                      {item.description}
+                    </p>
                   )}
                 </li>
               ))}
@@ -137,15 +143,12 @@ const Ecosystem = () => {
 
           <div className={clsx("hidden", "md:flex md:flex-col")}>
             <ul
-              className={clsx(
-                styles.roadMapSteps,
-                "flex flex-row gap-[144px] items-end"
-              )}
+              className={clsx(styles.roadMapSteps, "flex flex-row items-end")}
             >
               {ecosystemData
                 .filter((item, index) => index % 2 == 0)
                 .map((item, index) => (
-                  <li key={item.id} className="flex flex-1">
+                  <li key={item.id} className="flex flex-1 justify-center">
                     <div
                       className={clsx(boxStyles.md, "py-4 px-7 max-w-[156px]")}
                     >
@@ -226,10 +229,12 @@ const Ecosystem = () => {
                       <div
                         className={clsx(
                           styles.activeTitle,
-                          "absolute bottom-6 w-[200%]"
+                          "absolute bottom-0 w-[200%] lg:bottom-6"
                         )}
                       >
-                        <p className="text-3xl font-semibold">{item.title}</p>
+                        <p className="text-2xl font-semibold lg:text-3xl">
+                          {item.title}
+                        </p>
                         <p className="text-base mt-2">{item.description}</p>
                       </div>
                     )}

@@ -85,11 +85,12 @@ const Roadmap = () => {
         className={clsx(
           landingStyles.section,
           "px-8 py-[60px]",
-          "md:px-[100px] md:pt-20 md:pb-[68px]"
+          "xs:px-[176px] xs:py-20",
+          "md:px-[100px] md:pb-[68px]"
         )}
       >
         <div className="flex flex-col w-full">
-          <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
+          <p className="text-center text-3xl max-w-[980px] mx-auto font-semibold mb-12 md:mt-5 xs:text-4xl">
             Roadmap
           </p>
 
@@ -142,7 +143,7 @@ const Roadmap = () => {
                     <span
                       className={clsx(
                         "text-14px font-bold font-birdBold",
-                        "md:tet-bold"
+                        "md:text-bold"
                       )}
                     >
                       {roadmap.label}
