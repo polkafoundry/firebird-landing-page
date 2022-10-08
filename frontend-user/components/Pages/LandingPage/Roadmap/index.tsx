@@ -136,8 +136,10 @@ const Roadmap = () => {
                     className={clsx(
                       "flex flex-col text-white absolute justify-between",
                       roadmap.checked ? "-top-[40px]" : "-top-[30px]",
-                      "md:-top-[88px] md:h-[44px]",
-                      roadmap.checked ? "md:-left-4" : "md:left-0"
+                      "md:h-[44px]",
+                      roadmap.checked
+                        ? "md:-left-4 md:-top-[86px]"
+                        : "md:left-0 md:-top-[88px]"
                     )}
                   >
                     <span

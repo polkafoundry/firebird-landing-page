@@ -24,7 +24,7 @@ const WhatIsFirebird = () => {
           {" "}
           <span className="text-main uppercase font-semibold font-birdMedium tracking-wider text-sm md:text-base">{`What's Firebird?`}</span>
           <p
-            className="font-semibold max-w-[720px] w-full text-3xl xs:text-5xl md:text-4xl"
+            className="font-semibold max-w-[720px] w-full text-3xl sm:text-5xl xs:text-4xl"
             data-aos="fade-up"
           >
             Firebird is the optimized chain that allows{" "}
