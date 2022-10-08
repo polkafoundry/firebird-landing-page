@@ -35,8 +35,8 @@ const LandingPage = () => {
             )}
             data-aos="fade-up"
           >
-            Enhance your next hassle-free and user-friendly NFT gaming &
-            metaverse with Firebird
+            Develop/ Build the next hassle-free and user-friendly NFT gaming &
+            metaverse with Firebird.
           </p>
         </div>
       </div>

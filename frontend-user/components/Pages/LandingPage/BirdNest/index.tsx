@@ -44,7 +44,8 @@ const BirdNest = () => {
             "md:text-base"
           )}
         >
-          Unlock the door to the Firebird world
+          Enhance your next hassle-free and user-friendly NFT gaming & metaverse
+          with Firebird.
         </p>
 
         <div
@@ -100,9 +101,9 @@ const BirdNest = () => {
           >
             <p className={componentStyles.title}>Developer Hub</p>
             <span className={componentStyles.description}>
-              {`An optimal space is designed for developers. Let's start
-              investigating technological architecture and implementing your
-              blockchain ideas at Firebird Developer Hub.`}
+              {`An optimal space designed for developers. Let's start
+                delving deeper into the technological architecture and pitching
+                in your blockchain ideas at Firebird Developer Hub.`}
             </span>
             <div className={clsx(componentStyles.button, "gap-2")}>
               <ButtonLink
@@ -149,8 +150,9 @@ const BirdNest = () => {
             <p className={componentStyles.title}>Firebird Documentation</p>
             <span className={componentStyles.description}>
               {`Dive into the Firebird ecosystem to learn more about the
-              platform’s features, solutions, infrastructure, roadmap, etc., and
-              understand why we started building Firebird.`}
+              platform’s features, solutions, infrastructure, roadmap, etc.
+              Understand from A-Z about us, including the motivation behind
+              building Firebird.`}
             </span>
             <div className={componentStyles.button}>
               <ButtonLink

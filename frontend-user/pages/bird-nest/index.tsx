@@ -1,19 +1,13 @@
-import Head from "next/head"
 import DefaultLayout from "../../components/Layouts/DefaultLayout"
 import BirdNestPage from "../../components/Pages/BirdNestPage"
 
 const BirdNest = () => {
   return (
     <>
-      <Head>
-        <title>Firebird Nest</title>
-        <meta
-          name="description"
-          content="Unlock the door to the Firebird World"
-        />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
-      <DefaultLayout>
+      <DefaultLayout
+        title="Firebird Bird Nest"
+        description="Dive into the Firebird ecosystem to learn more about the platform’s features, solutions, infrastructure, roadmap, etc. Understand from A-Z about us, including the motivation behind building Firebird."
+      >
         <BirdNestPage />
       </DefaultLayout>
     </>

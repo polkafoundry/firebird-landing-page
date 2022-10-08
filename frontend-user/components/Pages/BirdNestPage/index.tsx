@@ -25,7 +25,8 @@ const BirdNestPage = () => {
             Bird Nest
           </p>
           <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
-            Unlock the door to the Firebird World
+            Enhance your next hassle-free and user-friendly NFT gaming &
+            metaverse with Firebird.
           </p>
         </div>
       </div>
@@ -92,9 +93,9 @@ const BirdNestPage = () => {
                 Developer Hub
               </p>
               <span className="mt-4 text-sm md:text-base">
-                An optimal space is designed for developers. <br /> Let&#39;s
-                start investigating technological architecture and implementing
-                your blockchain ideas at Firebird Developer Hub.
+                An optimal space designed for developers. <br /> Let&#39;s start
+                delving deeper into the technological architecture and pitching
+                in your blockchain ideas at Firebird Developer Hub.
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink
@@ -148,8 +149,9 @@ const BirdNestPage = () => {
               </p>
               <span className="mt-4 text-sm md:text-base">
                 Dive into the Firebird ecosystem to learn more about the
-                platform’s features, solutions, infrastructure, roadmap, etc.,
-                and understand why we started building Firebird.
+                platform’s features, solutions, infrastructure, roadmap, etc.
+                Understand from A-Z about us, including the motivation behind
+                building Firebird.
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink

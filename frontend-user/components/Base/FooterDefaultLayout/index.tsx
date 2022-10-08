@@ -52,7 +52,7 @@ const FooterDefaultLayout = () => {
         )}
       >
         <div className="w-full flex">
-          <div className="flex flex-col max-w-full w-full md:max-w-[300px] items-center">
+          <div className="flex flex-col max-w-full w-full md:max-w-[300px] items-center md:items-start">
             <div className="flex">
               <Image src={logoText} alt="" />
             </div>

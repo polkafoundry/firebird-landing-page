@@ -62,7 +62,8 @@ const UseCase = () => {
               "md:text-4xl md:mt-3 "
             )}
           >
-            Develop your blockchain ideas on the potential platform
+            Converting your blockchain ideas to reality with our potential
+            platform
           </p>
           <span className="mt-5 text-14px md:text-lg">
             Firebird offers you the flexibility, security, reliability, and
