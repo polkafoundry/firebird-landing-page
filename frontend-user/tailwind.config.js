@@ -48,6 +48,7 @@ module.exports = {
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
       "10px": ["10px", { lineHeight: "14px" }],
+      "14px": ["14px", { lineHeight: "20px" }],
       "16px": ["16px", { lineHeight: "20px" }],
       "22px": ["22px", { lineHeight: "36px" }]
     },

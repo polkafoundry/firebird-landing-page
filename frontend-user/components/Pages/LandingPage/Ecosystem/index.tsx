@@ -81,7 +81,7 @@ const Ecosystem = () => {
               )}
             >
               {ecosystemData.map((item, index) => (
-                <li key={item.id} className={clsx(index % 2 == 0 && " ")}>
+                <li key={item.id}>
                   <div
                     className={clsx(
                       boxStyles.md,

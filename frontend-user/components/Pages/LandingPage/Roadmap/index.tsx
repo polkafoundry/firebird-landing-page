@@ -106,38 +106,55 @@ const Roadmap = () => {
                 <li
                   key={roadmap.id}
                   className={clsx(
-                    "flex w-auto bg-[#1f1f1f] h-fit rounded-3xl px-5 mr-8 pt-8 pb-6 border-2 border-[#ffffff1f] relative",
-                    roadmap.checked ? styles.stepActived : ""
+                    "flex w-auto bg-[#1f1f1f] h-fit rounded-3xl mr-8 border-2 border-[#ffffff1f] relative",
+                    roadmap.checked
+                      ? `${styles.stepActived} ml-4`
+                      : "px-5 mr-8 pt-8 pb-6",
+                    "md:mt-0"
                   )}
                 >
+                  <div className="rounded-3xl overflow-hidden flex flex-1">
+                    <ul className="flex flex-col gap-2 list-disc pl-5">
+                      {roadmap.details.map((item: string, index: number) => (
+                        <li
+                          className="text-sm md:text-base"
+                          key={index + 100}
+                          data-aos="fade-up"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {roadmap.checked && (
+                      <div className="absolute top-3 right-4 ">
+                        <Image src={iconCheck} alt="" layout="fixed" />
+                      </div>
+                    )}
+                  </div>
                   <div
                     className={clsx(
-                      "flex flex-col text-white absolute  justify-between",
-                      "md:-top-[82px] md:left-0 md:h-[44px]"
+                      "flex flex-col text-white absolute justify-between",
+                      roadmap.checked ? "-top-[40px]" : "-top-[30px]",
+                      "md:-top-[88px] md:h-[44px]",
+                      roadmap.checked ? "md:-left-4" : "md:left-0"
                     )}
                   >
-                    <span className="text-base font-bold font-birdBold">
+                    <span
+                      className={clsx(
+                        "text-14px font-bold font-birdBold",
+                        "md:tet-bold"
+                      )}
+                    >
                       {roadmap.label}
                     </span>
-                    <span className="h-3 w-[2px] bg-[#ffffff52]"></span>
+                    <span
+                      className={clsx(
+                        "h-3 w-[2px] bg-[#ffffff52] absolute rotate-90 top-1.5",
+                        roadmap.checked ? `-left-[23px]` : "-left-[29px]",
+                        "md:relative md:left-0 md:rotate-0"
+                      )}
+                    ></span>
                   </div>
-
-                  <ul className="flex flex-col gap-2 list-disc pl-5">
-                    {roadmap.details.map((item: string, index: number) => (
-                      <li
-                        className="text-base"
-                        key={index + 100}
-                        data-aos="fade-up"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  {roadmap.checked && (
-                    <div className="absolute top-3 right-8">
-                      <Image src={iconCheck} alt="" layout="fixed" />
-                    </div>
-                  )}
                 </li>
               ))}
             </ul>
