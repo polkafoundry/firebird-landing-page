@@ -71,8 +71,8 @@ const Ecosystem = () => {
               "md:mt-2"
             )}
           >
-            Grow your project using the Firebird ecosystem's end-to-end
-            infrastructure.
+            {`Grow your project using the Firebird ecosystem's end-to-end
+            infrastructure.`}
           </p>
 
           <div className={clsx("flex flex-row", "md:hidden")}>

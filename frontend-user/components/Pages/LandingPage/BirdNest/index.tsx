@@ -100,9 +100,9 @@ const BirdNest = () => {
           >
             <p className={componentStyles.title}>Developer Hub</p>
             <span className={componentStyles.description}>
-              An optimal space is designed for developers. Let's start
+              {`An optimal space is designed for developers. Let's start
               investigating technological architecture and implementing your
-              blockchain ideas at Firebird Developer Hub.
+              blockchain ideas at Firebird Developer Hub.`}
             </span>
             <div className={clsx(componentStyles.button, "gap-2")}>
               <ButtonLink
@@ -148,9 +148,9 @@ const BirdNest = () => {
           >
             <p className={componentStyles.title}>Firebird Documentation</p>
             <span className={componentStyles.description}>
-              Dive into the Firebird ecosystem to learn more about the
+              {`Dive into the Firebird ecosystem to learn more about the
               platform’s features, solutions, infrastructure, roadmap, etc., and
-              understand why we started building Firebird.
+              understand why we started building Firebird.`}
             </span>
             <div className={componentStyles.button}>
               <ButtonLink
