@@ -52,14 +52,14 @@ const UseCase = () => {
           className={clsx(
             "flex flex-col w-full max-w-[420px] items-center",
             "xs:max-w-full",
-            "md-max-w-[420px]"
+            "md-max-w-[420px] md:items-start"
           )}
         >
           <p
             className={clsx(
               "text-3xl max-w-[980px] font-semibold mt-2",
               "xs:mt-3 xs:text-4xl",
-              "md:text-4xl md:mt-3 "
+              "md:text-4xl md:mt-3"
             )}
           >
             Converting your blockchain ideas to reality with our potential

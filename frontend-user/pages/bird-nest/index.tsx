@@ -6,7 +6,7 @@ const BirdNest = () => {
     <>
       <DefaultLayout
         title="Firebird Bird Nest"
-        description="Dive into the Firebird ecosystem to learn more about the platform’s features, solutions, infrastructure, roadmap, etc. Understand from A-Z about us, including the motivation behind building Firebird."
+        description="Understand from A-Z about us, including the motivation behind building Firebird."
       >
         <BirdNestPage />
       </DefaultLayout>
