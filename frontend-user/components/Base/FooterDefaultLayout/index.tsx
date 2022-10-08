@@ -110,7 +110,6 @@ const FooterDefaultLayout = () => {
                   <a
                     key={index + 100}
                     href={item.url}
-                    target="_blank"
                     rel="noreferrer"
                     className="w-full max-w-[120px] hover:underline"
                   >

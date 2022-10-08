@@ -59,7 +59,6 @@ const HeaderDefaultLayout = () => {
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
-                target="_blank"
                 className={clsx("hover:tracking-wider duration-500", {
                   "text-main": asPath === item.uri
                 })}
@@ -108,7 +107,6 @@ const HeaderDefaultLayout = () => {
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
-                target="_blank"
                 className={clsx("hover:tracking-wider duration-500", {
                   "text-main": asPath === item.uri
                 })}
