@@ -24,13 +24,11 @@ const roadmapData: Array<RoadmapItemTypes> = [
     label: "Q4/2022",
     checked: new Date().getTime() > new Date("12/31/2022").getTime(),
     details: [
+      "Official Rebrand Announcement",
       "Onboard 10 Projects on Testnet",
-      "Testnet Campaign",
-      "Release Mainnet & Onbroad 10 Projects",
-      "Swap PKF ERC20 token to native PKF",
-      "Validator Campaign",
-      "Rebrand",
-      "UX enabling features"
+      "The 1st Testnet Campaign",
+      "Release Mainnet & Onbroad 10 Projects on Mainnet",
+      "Swap PKF ERC20 token to native PKF"
     ]
   },
   {
