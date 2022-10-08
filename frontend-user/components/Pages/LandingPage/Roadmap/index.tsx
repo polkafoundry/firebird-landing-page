@@ -82,16 +82,21 @@ const Roadmap = () => {
   return (
     <div className="w-full bg-black text-white">
       <div
-        className={clsx(landingStyles.section, "px-[100px] pt-20 pb-[68px]")}
+        className={clsx(
+          landingStyles.section,
+          "px-8 py-[60px]",
+          "xs:px-[176px] xs:py-20",
+          "md:px-[100px] md:pb-[68px]"
+        )}
       >
         <div className="flex flex-col w-full">
-          <p className="text-center text-3xl md:text-4xl max-w-[980px] mx-auto font-semibold mt-5 mb-12">
+          <p className="text-center text-3xl max-w-[980px] mx-auto font-semibold mb-12 md:mt-5 xs:text-4xl">
             Roadmap
           </p>
 
           <div className="flex w-full relative">
             <span
-              className={clsx(styles.progress)}
+              className={clsx(styles.progress, "md:block hidden")}
               style={{ width: progressWidth }}
             ></span>
             <ul
@@ -102,33 +107,57 @@ const Roadmap = () => {
                 <li
                   key={roadmap.id}
                   className={clsx(
-                    "flex w-auto bg-[#1f1f1f] h-fit rounded-3xl px-5 mr-8 pt-8 pb-6 border-2 border-[#ffffff1f] relative",
-                    roadmap.checked ? styles.stepActived : ""
+                    "flex w-auto bg-[#1f1f1f] h-fit rounded-3xl mr-8 border-2 border-[#ffffff1f] relative",
+                    roadmap.checked
+                      ? `${styles.stepActived} ml-4`
+                      : "px-5 mr-8 pt-8 pb-6",
+                    "md:mt-0"
                   )}
                 >
-                  <div className="flex flex-col text-white absolute -top-[82px] left-0 h-[44px] justify-between">
-                    <span className="text-base font-bold font-birdBold">
+                  <div className="rounded-3xl overflow-hidden flex flex-1">
+                    <ul className="flex flex-col gap-2 list-disc pl-5">
+                      {roadmap.details.map((item: string, index: number) => (
+                        <li
+                          className="text-sm md:text-base"
+                          key={index + 100}
+                          data-aos="fade-up"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {roadmap.checked && (
+                      <div className="absolute top-3 right-4 ">
+                        <Image src={iconCheck} alt="" layout="fixed" />
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={clsx(
+                      "flex flex-col text-white absolute justify-between",
+                      roadmap.checked ? "-top-[40px]" : "-top-[30px]",
+                      "md:h-[44px]",
+                      roadmap.checked
+                        ? "md:-left-4 md:-top-[86px]"
+                        : "md:left-0 md:-top-[88px]"
+                    )}
+                  >
+                    <span
+                      className={clsx(
+                        "text-14px font-bold font-birdBold",
+                        "md:text-bold"
+                      )}
+                    >
                       {roadmap.label}
                     </span>
-                    <span className="h-3 w-[2px] bg-[#ffffff52]"></span>
+                    <span
+                      className={clsx(
+                        "h-3 w-[2px] bg-[#ffffff52] absolute rotate-90 top-1.5",
+                        roadmap.checked ? `-left-[23px]` : "-left-[29px]",
+                        "md:relative md:left-0 md:rotate-0"
+                      )}
+                    ></span>
                   </div>
-
-                  <ul className="flex flex-col gap-2 list-disc pl-5">
-                    {roadmap.details.map((item: string, index: number) => (
-                      <li
-                        className="text-base"
-                        key={index + 100}
-                        data-aos="fade-up"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  {roadmap.checked && (
-                    <div className="absolute top-3 right-8">
-                      <Image src={iconCheck} alt="" layout="fixed" />
-                    </div>
-                  )}
                 </li>
               ))}
             </ul>

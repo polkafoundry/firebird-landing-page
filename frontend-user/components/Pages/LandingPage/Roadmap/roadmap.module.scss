@@ -19,6 +19,29 @@
     );
   }
 }
+@media (max-width: theme("screens.md")) {
+  .roadMapSteps {
+    grid-template-columns: 1fr;
+    padding-top: 29px;
+    padding-left: 20px;
+    gap: 72px;
+    &::before {
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
+      padding-top: 0px;
+      gap: 0px;
+    }
+  }
+}
+@media (max-width: theme("screens.xs")) {
+  .roadMapSteps {
+    gap: 60px;
+  }
+}
+
 .progress {
   position: absolute;
   content: "";
@@ -31,22 +54,8 @@
 .stepActived {
   background: linear-gradient(180deg, #914be1 0%, #e57146 100%);
   border: none;
-  backdrop-filter: blur(20px);
-  border-radius: 32px;
-  position: relative;
-  box-sizing: border-box;
-  &::before {
-    content: "";
-    width: 100%;
-    height: calc(100%);
-    position: absolute;
-    top: -2px;
-    left: -10px;
-    z-index: -1;
-    // background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(20px);
-    border-radius: 32px;
-    border: 2px solid rgba(255, 255, 255, 0.12);
+
+  & > div:first-child {
     background: linear-gradient(
         235.66deg,
         rgba(255, 255, 255, 0.12) 0%,
@@ -57,5 +66,9 @@
         rgba(255, 255, 255, 0.12),
         rgba(255, 255, 255, 0.12)
       );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    transform: translateX(-15px) translateY(-12px);
+    padding: 32px 20px 24px 20px;
   }
 }

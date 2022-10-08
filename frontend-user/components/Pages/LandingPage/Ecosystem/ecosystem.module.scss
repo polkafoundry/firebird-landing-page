@@ -1,0 +1,58 @@
+.progress {
+  background: linear-gradient(270deg, #b3579c -17.67%, #e27475 100%);
+}
+
+.stepActived {
+  background: linear-gradient(180deg, #914be1 0%, #e57146 100%);
+  border: none;
+
+  & > div {
+    background: linear-gradient(
+        235.66deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.048) 70.29%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.12),
+        rgba(255, 255, 255, 0.12)
+      );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    transform: translateX(-15px) translateY(-12px);
+    padding: 20px 17px;
+
+    @media (min-width: theme("screens.lg")) {
+      padding: 20px 70px 30px 70px;
+      left: 50%;
+      top: calc(100% + 2px);
+      max-width: 230px;
+    }
+    @media (min-width: theme("screens.xl")) {
+      max-width: 295px;
+    }
+  }
+}
+
+.connectLine {
+  display: inline-block;
+  position: absolute;
+  @media (min-width: theme("screens.md")) {
+    left: 50%;
+    top: calc(100% + 2px);
+  }
+}
+
+.connectLineBelow {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 2px);
+}
+
+.activeTitle {
+  left: calc(100% + 52px);
+  @media (min-width: theme("screens.lg")) {
+    left: calc(100% + 82px);
+  }
+}

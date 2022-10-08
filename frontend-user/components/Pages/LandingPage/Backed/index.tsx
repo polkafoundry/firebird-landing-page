@@ -64,14 +64,23 @@ const partners: Array<PartnerTypes> = [
 const Backed = () => {
   return (
     <div className={styles.bgBacked}>
-      <div className={clsx(landingStyles.section, "px-5 md:px-[138px] pt-20")}>
+      <div
+        className={clsx(
+          landingStyles.section,
+          "px-5 xs:px-16 md:px-[138px] pt-[60px] xs:pt-20"
+        )}
+      >
         <div className="flex flex-col justify-center">
           <p className="text-4xl font-semibold text-center w-full">Backed by</p>
           <a
             href="https://icetea.io/"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-col px-12 pt-10 pb-7 mt-7 bg-white w-fit mx-auto rounded-[32px] justify-center"
+            className={clsx(
+              "flex flex-col px-12 pt-10 pb-7 mt-7 bg-white w-fit mx-auto rounded-[32px] justify-center",
+              "xs:mt-8",
+              "md:mt-7"
+            )}
           >
             <div className="relative mx-auto">
               <Image
@@ -85,7 +94,7 @@ const Backed = () => {
             <p className="text-center text-xl font-semibold">Icetea Labs</p>
           </a>
 
-          <p className="md:hidden mt-20 text-center font-semibold text-4xl">
+          <p className="mt-[60px] text-center font-semibold text-4xl xs:mt-20 md:hidden">
             Our partners
           </p>
 
@@ -99,8 +108,9 @@ const Backed = () => {
 
           <div
             className={clsx(
-              "w-full grid grid-cols-2 gap-3 mt-7 justify-center",
-              "xs:flex xs:flex-wrap"
+              "w-full grid grid-cols-2 gap-3 mt-5 justify-center",
+              "xs:grid-cols-4",
+              "md:flex md:flex-wrap xs:mt-8 md:mt-7"
             )}
           >
             {partners.map((item: PartnerTypes, index: number) => (
@@ -111,13 +121,13 @@ const Backed = () => {
                 rel="noreferrer"
                 className={clsx(
                   "bg-white rounded-[32px] pt-7 pb-5 flex flex-col justify-center items-center",
-                  "xs:w-[184px] xs:pt-9 xs:pb-7"
+                  "md:w-[184px] md:pt-9 md:pb-7"
                 )}
               >
                 <div
                   className={clsx(
                     "relative w-[68px] h-[68px]",
-                    "xs:w-20 xs:h-20"
+                    "md:w-20 md:h-20"
                   )}
                 >
                   <Image src={item.image} alt="" />

@@ -46,11 +46,13 @@ const WhyFirebird = () => {
     <div
       className={clsx(
         styles.section,
-        "px-5 xs:px-[60px] md:px-[58px] pt-24 pb-[140px]"
+        "px-5 pt-[60px] pb-[140px]",
+        "xs:pt-20 xs:px-[60px]",
+        "md:pt-24 md:px-[58px]"
       )}
     >
       <div className="flex flex-col w-full">
-        <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
+        <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm xs:text-xl md:text-base">
           Why Firebird?
         </span>
         <p
@@ -64,16 +66,21 @@ const WhyFirebird = () => {
           powerful and efficient features
         </p>
 
-        <div className="flex flex-wrap justify-center gap-[19px] mt-7">
+        <div
+          className={clsx(
+            "flex flex-wrap justify-center gap-3 mt-5",
+            "xs:mt-10 xs:gap-4",
+            "md:mt-7 md:gap-[19px]"
+          )}
+        >
           {features.map((feature: FeatureTypes, index: number) => (
             <div
               key={index}
               className={clsx(
                 styles.cardHover,
-                "flex max-w-full gap-10 w-full pt-[60px] pb-12",
+                "flex max-w-full w-full flex-col py-8 gap-3 items-start px-8",
                 "md:flex-col md:max-w-[374px] md:pb-[52px] md:items-start md:pt-8 md:gap-0",
-                "sm:flex-row xs:pb-[60px] xs:pt-8 xs:gap-10 sm:items-center xs:px-10",
-                "flex-col max-w-full pb-[52px] pt-8 gap-3 items-start px-8"
+                "sm:flex-row xs:pb-[48px] xs:pt-[60px] xs:gap-10 sm:items-center xs:px-10"
               )}
               data-aos="zoom-in"
             >
@@ -92,10 +99,10 @@ const WhyFirebird = () => {
                 />
               </div>
               <div className="flex flex-col flex-1">
-                <span className="md:mt-8 text-3xl font-semibold xs:text-4xl md:text-3xl">
+                <span className="md:mt-8 text-xl font-semibold xs:text-4xl md:text-3xl">
                   {feature.title}
                 </span>
-                <span className="mt-3 text-sm xs:text-[22px] md:text-base">
+                <span className="mt-3 text-sm xs:text-22px md:text-base">
                   {feature.detail}
                 </span>
               </div>
