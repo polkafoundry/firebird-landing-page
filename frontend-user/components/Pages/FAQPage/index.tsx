@@ -186,7 +186,9 @@ const FAQPage = () => {
               </p>
               <div
                 ref={(el) => (answersRef.current[index] = el)}
-                className={"text-lg opacity-80 mt-5 whitespace-pre-line"}
+                className={
+                  "text-lg opacity-80 mt-5 whitespace-pre-line break-words"
+                }
               >
                 {item.answer}
               </div>
