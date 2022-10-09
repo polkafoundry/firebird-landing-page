@@ -11,6 +11,9 @@ import birdnestDocumentation from "/public/images/birdnest-documentation.png"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
 
+const firebirdTechBlog =
+  process.env.FIREBIRD_TECH_BLOG || "http://techblog-firebirdchain.com"
+
 const componentStyles = {
   titleBox:
     "flex flex-col max-w-[440px] justify-center items-center text-center",
@@ -69,7 +72,7 @@ const BirdNest = () => {
             </span>
             <div className={componentStyles.button}>
               <ButtonLink
-                href="https://firebird-techblog.netlify.app/"
+                href={firebirdTechBlog}
                 target="_blank"
                 className="px-[43px] bg-black text-white"
               >

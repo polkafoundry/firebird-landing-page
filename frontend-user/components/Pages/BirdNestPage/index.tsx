@@ -10,6 +10,9 @@ import ButtonLink from "../../Base/ButtonLink"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
 
+const firebirdTechBlog =
+  process.env.FIREBIRD_TECH_BLOG || "http://techblog-firebirdchain.com"
+
 const BirdNestPage = () => {
   return (
     <div className="flex flex-col w-full">
@@ -61,7 +64,7 @@ const BirdNestPage = () => {
               </span>
               <div className="flex mt-3 md:mt-7">
                 <ButtonLink
-                  href="https://firebird-techblog.netlify.app/"
+                  href={firebirdTechBlog}
                   target="_blank"
                   className="px-[43px] bg-black text-white"
                 >
