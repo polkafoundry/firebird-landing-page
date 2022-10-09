@@ -72,7 +72,8 @@ type HeadDefaultTypes = {
 
 export const headDefault: HeadDefaultTypes = {
   description:
-    "Develop/ Build the next hassle-free and user-friendly NFT gaming & metaverse with Firebird.",
-  image: "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_firebird_ebe64c4845.png",
+    "Build the next hassle-free and user-friendly NFT gaming & metaverse with Firebird.",
+  image:
+    "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_firebird_ebe64c4845.png",
   title: "Firebird"
 }
