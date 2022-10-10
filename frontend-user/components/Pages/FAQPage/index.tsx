@@ -17,7 +17,7 @@ const faqs: Array<FaqTypes> = [
   {
     id: 1,
     question: "What is Firebird?",
-    answer: `Firebird is a stand-alone chain on Cosmos designed specifically for Web3 games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets.`
+    answer: `Firebird is a stand-alone chain built with Cosmos SDK designed specifically for Web3 games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets.`
   },
   {
     id: 2,
