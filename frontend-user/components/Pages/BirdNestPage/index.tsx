@@ -102,7 +102,23 @@ const BirdNestPage = () => {
                 {`An optimal space designed for developers. Start exploring technological architecture and actualize your blockchain ideas with Firebird Developer Hub.`}
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
-                <ButtonLink
+                <Button className="px-[33px] bg-black text-white">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 relative">
+                      <Image src={iconGithub} alt="" />
+                    </div>
+                    Github
+                  </div>
+                </Button>
+                <Button className="px-[33px] bg-black text-white">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 relative">
+                      <Image src={iconReddit} alt="" />
+                    </div>
+                    Reddit
+                  </div>
+                </Button>
+                {/* <ButtonLink
                   href="https://github.com/"
                   target="_blank"
                   className="px-[33px] bg-black text-white"
@@ -125,7 +141,7 @@ const BirdNestPage = () => {
                     </div>
                     Reddit
                   </div>
-                </ButtonLink>
+                </ButtonLink> */}
               </div>
             </div>
             <div

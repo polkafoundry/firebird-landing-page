@@ -125,6 +125,7 @@ const Partners = () => {
                   "bg-white rounded-[32px] pt-7 pb-5 flex flex-col justify-center items-center",
                   "md:w-[184px] md:pt-9 md:pb-7"
                 )}
+                data-aos="zoom-in"
               >
                 <div
                   className={clsx(

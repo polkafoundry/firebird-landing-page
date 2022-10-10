@@ -109,7 +109,19 @@ const BirdNest = () => {
               {`An optimal space designed for developers. Start exploring technological architecture and actualize your blockchain ideas with Firebird Developer Hub.`}
             </span>
             <div className={clsx(componentStyles.button, "gap-2")}>
-              <ButtonLink
+              <Button className="px-[33px] bg-black text-white">
+                <div className="flex items-center gap-2">
+                  <Image src={iconGithub} alt="" width={28} height={28} />
+                  Github
+                </div>
+              </Button>
+              <Button className="px-[33px] bg-black text-white">
+                <div className="flex items-center gap-2">
+                  <Image src={iconReddit} alt="" width={28} height={28} />
+                  Reddit
+                </div>
+              </Button>
+              {/* <ButtonLink
                 href="https://github.com/"
                 target="_blank"
                 className="px-[33px] bg-black text-white"
@@ -128,7 +140,7 @@ const BirdNest = () => {
                   <Image src={iconReddit} alt="" width={28} height={28} />
                   Reddit
                 </div>
-              </ButtonLink>
+              </ButtonLink> */}
             </div>
           </div>
           <div className="flex max-w-[640px] items-center" data-aos="fade-left">
