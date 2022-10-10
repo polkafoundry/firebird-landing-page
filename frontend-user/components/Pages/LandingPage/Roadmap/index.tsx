@@ -27,7 +27,7 @@ const roadmapData: Array<RoadmapItemTypes> = [
       "Official Rebrand Announcement",
       "Onboard 10 Projects on Testnet",
       "The 1st Testnet Campaign",
-      "Release Mainnet & Onbroad 10 Projects on Mainnet",
+      "Release Mainnet & Onboard 10 Projects on Mainnet",
       "Swap PKF ERC20 token to native PKF"
     ]
   },
