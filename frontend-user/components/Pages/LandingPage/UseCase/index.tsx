@@ -24,7 +24,7 @@ const usecases: Array<UseCaseTypes> = [
     title: "NFT Collectibles & Marketplace",
     image: imgNft,
     detail:
-      "Offering a UX comparable to traditional applications and onboard new users with a simple approach, providing a suite of integrated services for games. "
+      "Offering a UX comparable to traditional applications and onboarding new users with a simple approach, providing a suite of integrated services for games."
   },
   {
     title: "AR - VR & Metaverse",
