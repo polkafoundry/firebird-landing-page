@@ -40,7 +40,7 @@ const faqs: Array<FaqTypes> = [
   },
   {
     id: 5,
-    question: "Why did Firebird build on Cosmos?",
+    question: "Why did Firebird build with Cosmos SDK?",
     answer: `Cosmos is an internet of blockchains. By addressing the main issues of previous blockchain projects and enabling chain interoperability, Cosmos will create an easy development environment for blockchain technology. 
     Cosmos can solve blockchain challenges thanks to its facilitated scalability, increased sovereignty, speed, and fast finality. It allows applications to scale to millions of users and there are no limits to the application's governance when every chain is maintained by its own set of validators.
     By standardizing architecture components and customizing opportunities, Cosmos offers the possibility of an unconstrained, seamless, and intuitive user experience.

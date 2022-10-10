@@ -10,7 +10,8 @@ import logoGunstar from "/public/images/partners/gunstar.png"
 import logoMasterWar from "/public/images/partners/master-war.png"
 import logoMonsterra from "/public/images/partners/monsterra.png"
 import logoNFTTrade from "/public/images/partners/nft-trade.png"
-import logoPlanetSandbox from "/public/images/partners/planet-sanbox.png"
+import logoFaraland from "/public/images/partners/faraland.png"
+import logoWanaka from "/public/images/partners/wanaka.png"
 
 type PartnerTypes = {
   name: string
@@ -35,30 +36,30 @@ const partners: Array<PartnerTypes> = [
     uri: "https://monsterra.io/"
   },
   {
-    image: logoPlanetSandbox,
-    name: "Planet Sandbox",
-    uri: "https://planetsandbox.io/"
+    image: logoFaraland,
+    name: "Faraland",
+    uri: "https://faraland.io/"
   },
   {
-    image: logoNFTTrade,
-    name: "NFTTrade",
-    uri: "https://nftrade.com/"
+    image: logoWanaka,
+    name: "Wanaka",
+    uri: "https://wanakafarm.com/"
   },
   {
     image: logoMasterWar,
     name: "My Master War",
     uri: "https://mymasterwar.com/"
   },
-  {
-    image: logoEvermoon,
-    name: "Evermoon",
-    uri: "https://www.evermoon.games/"
-  },
-  {
-    image: logoF2C,
-    name: "F2C",
-    uri: "https://f2nft.games/"
-  }
+  // {
+  //   image: logoEvermoon,
+  //   name: "Evermoon",
+  //   uri: "https://www.evermoon.games/"
+  // },
+  // {
+  //   image: logoF2C,
+  //   name: "F2C",
+  //   uri: "https://f2nft.games/"
+  // }
 ]
 
 const Partners = () => {
@@ -111,7 +112,7 @@ const Partners = () => {
               "w-full mx-auto grid grid-cols-2 gap-3 mt-5 justify-center",
               "sm:grid-cols-4",
               "md:flex md:flex-wrap xs:mt-8 md:mt-7",
-              "lg:grid-cols-4 lg:grid lg:w-fit"
+              // "lg:grid-cols-4 lg:grid lg:w-fit"
             )}
           >
             {partners.map((item: PartnerTypes, index: number) => (
