@@ -46,7 +46,7 @@ const partners: Array<PartnerTypes> = [
   },
   {
     image: logoMasterWar,
-    name: "My master war",
+    name: "My Master War",
     uri: "https://mymasterwar.com/"
   },
   {
@@ -71,7 +71,7 @@ const Backed = () => {
         )}
       >
         <div className="flex flex-col justify-center">
-          <p className="text-4xl font-semibold text-center w-full">Backed by</p>
+          {/* <p className="text-4xl font-semibold text-center w-full">Backed by</p>
           <a
             href="https://icetea.io/"
             target="_blank"
@@ -92,7 +92,7 @@ const Backed = () => {
               />
             </div>
             <p className="text-center text-xl font-semibold">Icetea Labs</p>
-          </a>
+          </a> */}
 
           <p className="mt-[60px] text-center font-semibold text-4xl xs:mt-20 md:hidden">
             Our partners
@@ -100,10 +100,10 @@ const Backed = () => {
 
           <p className="mt-20 text-center font-semibold text-4xl max-w-[980px] mx-auto hidden md:block">
             <span className="bg-main text-white px-1 rounded-md">
-              Our partners
+              Quality partners
             </span>{" "}
-            focus on long-term development to provide the best user experience
-            and benefits.
+            prioritize long-term development to provide cutting-edge user
+            experience and benefits
           </p>
 
           <div

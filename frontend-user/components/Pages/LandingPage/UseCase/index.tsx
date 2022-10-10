@@ -45,7 +45,7 @@ const UseCase = () => {
       )}
     >
       <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
-        What can you create on Firebird?
+        What can you achieve with Firebird?
       </span>
       <div className="flex flex-col w-full gap-10 items-center lg:flex-row md:gap-14">
         <div
@@ -62,7 +62,7 @@ const UseCase = () => {
               "md:text-4xl md:mt-3"
             )}
           >
-            Converting your blockchain ideas to reality with our potential
+            Turn your dream blockchain ideas into reality with our holistic
             platform
           </p>
           <span className="mt-5 text-14px md:text-lg">

@@ -27,18 +27,17 @@ const WhatIsFirebird = () => {
             className="font-semibold max-w-[720px] w-full text-3xl sm:text-5xl xs:text-4xl"
             data-aos="fade-up"
           >
-            Firebird is the optimized chain that allows{" "}
+            {`Firebird's optimized chain allows `}
             <span className="bg-black text-white rounded-md px-1">
               GameFi & Metaverse
             </span>{" "}
-            developers to create{" "}
+            developers to build{" "}
             <span className="bg-main text-white rounded-md px-1">scalable</span>{" "}
             and{" "}
             <span className="bg-main text-white rounded-md px-1">
-              user-friendly
+              intuitive
             </span>{" "}
-            realtime Dapps with near zero costs while never compromising
-            security
+            Dapps with near-zero costs while never compromising your security
           </p>
         </div>
 

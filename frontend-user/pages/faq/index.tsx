@@ -6,7 +6,7 @@ const Documentation = () => {
     <>
       <DefaultLayout
         title="Firebird FAQ"
-        description="Find answers to the questions we receive the most frequently here."
+        description="Find answers to the questions we receive most often here."
       >
         <FAQPage />
       </DefaultLayout>

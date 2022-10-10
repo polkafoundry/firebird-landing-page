@@ -34,8 +34,7 @@ const FirebirdCommunity = () => {
 
       <div className="flex flex-col pt-3">
         <p className="text-sm xs:text-22px md:text-lg text-center md:text-left">
-          {`Need more information about Firebird? Follow us on Firebird’s official
-          groups and channels so you won’t miss anything!`}
+          {`Need more information about Firebird? Follow us on official groups and channels to not miss out on anything!`}
         </p>
 
         <div
@@ -46,7 +45,7 @@ const FirebirdCommunity = () => {
         >
           {socialsData.map((item: SocialItemTypes, index: number) => (
             <a
-              href={item.url}
+              href={item.username ? item.url : "#"}
               target="_blank"
               rel="noreferrer"
               className={clsx(
@@ -59,7 +58,7 @@ const FirebirdCommunity = () => {
               <div className="flex flex-col w-full">
                 <span className="text-sm md:text-base">{item.label}</span>
                 <span className="text-lg md:text-[22px] md:leading-[32px] font-semibold">
-                  {item.username}
+                  {item.username || "Updating"}
                 </span>
               </div>
             </a>

@@ -17,12 +17,11 @@ const faqs: Array<FaqTypes> = [
   {
     id: 1,
     question: "What is Firebird?",
-    answer:
-      "Firebird is a stand-alone chain on Cosmos designed specifically for games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets."
+    answer: `Firebird is a stand-alone chain on Cosmos designed specifically for Web3 games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets.`
   },
   {
     id: 2,
-    question: "When will the mainnet launch?",
+    question: "When is the mainnet launch?",
     answer: "Firebird mainnet is expected to launch in December 2022."
   },
   {
@@ -49,7 +48,7 @@ const faqs: Array<FaqTypes> = [
   },
   {
     id: 6,
-    question: "Does Firebird have a bug bounty program available?",
+    question: "Does Firebird have a bug bounty program available at the moment?",
     answer: `Firebird will have a bug bounty program after the testnet “Firefly” is launched.
     More information about this program will be released soon. Let’s stay tuned to our channels for exclusive events and updates!`
   },
@@ -60,7 +59,7 @@ const faqs: Array<FaqTypes> = [
   },
   {
     id: 8,
-    question: "How does Firebird differ from other chains?",
+    question: "What makes Firebird different from other chains?",
     answer: `Firebird can solve most of the problems that blockchain gaming is now facing, like performance, scalability, interoperability, etc. Additionally, utilizing Icetea ecosystem, Firebird can support the full life cycle of a typical blockchain project (including preparation, blockchain development, token sales, NFT sales, game launch, player attraction, and metaverse experiences). 
     The Firebird team is currently investigating further distinctive features to provide efficient services and the best user experience in the future.`
   }
@@ -118,10 +117,10 @@ const FAQPage = () => {
           )}
         >
           <p className="text-6xl md:text-7xl font-birdMedium font-semibold">
-            How can we help you?
+            What are you looking for?
           </p>
           <p className="text-lg md:text-2xl md:leading-8 font-birdMedium mx-auto">
-            Find answers to the questions we receive the most frequently here.
+            Find answers to the questions we receive most often here.
           </p>
 
           <div

@@ -32,7 +32,7 @@ const CommunityPage = () => {
           className={clsx(
             styles.section,
             "p-5 pb-[60px] flex flex-col",
-            'md:px-[100px] md:pt-20 md:pb-[160px]'
+            "md:px-[100px] md:pt-20 md:pb-[160px]"
           )}
         >
           <FirebirdCommunity />

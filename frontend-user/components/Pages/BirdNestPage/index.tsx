@@ -28,8 +28,7 @@ const BirdNestPage = () => {
             Bird Nest
           </p>
           <p className="mt-5 text-3xl font-birdMedium max-w-[640px] mx-auto">
-            Enhance your next hassle-free and user-friendly NFT gaming &
-            metaverse with Firebird.
+            Fly into the Firebird world
           </p>
         </div>
       </div>
@@ -58,9 +57,9 @@ const BirdNestPage = () => {
                 The Firebird Blog
               </p>
               <span className="mt-4 text-sm md:text-base">
-                Where you can discover Firebird-related news, including updates,
-                research, analytics, events, partnerships, technological
-                knowledge, etc.
+                Discover our latest news, including updates, research,
+                analytics, events, partnerships, technological knowledge, and
+                etc.
               </span>
               <div className="flex mt-3 md:mt-7">
                 <ButtonLink
@@ -96,9 +95,7 @@ const BirdNestPage = () => {
                 Developer Hub
               </p>
               <span className="mt-4 text-sm md:text-base">
-                An optimal space designed for developers. <br /> Let&#39;s start
-                delving deeper into the technological architecture and pitching
-                in your blockchain ideas at Firebird Developer Hub.
+                {`An optimal space designed for developers. Start exploring technological architecture and actualize your blockchain ideas with Firebird Developer Hub.`}
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink
@@ -151,10 +148,7 @@ const BirdNestPage = () => {
                 Firebird Documentation
               </p>
               <span className="mt-4 text-sm md:text-base">
-                Dive into the Firebird ecosystem to learn more about the
-                platform’s features, solutions, infrastructure, roadmap, etc.
-                Understand from A-Z about us, including the motivation behind
-                building Firebird.
+                {`Read more about the Firebird ecosystem’s features, solutions, infrastructure, roadmap, etc., and understand why our journey started.`}
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink

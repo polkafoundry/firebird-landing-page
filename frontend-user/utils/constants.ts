@@ -16,7 +16,7 @@ export type SocialItemTypes = {
   img: string
   imgHover: string
   label: string
-  username: string
+  username?: string
   url: string
 }
 export const socialsData: Array<SocialItemTypes> = [
@@ -32,21 +32,21 @@ export const socialsData: Array<SocialItemTypes> = [
     imgHover: iconGithubHover,
     label: "Github",
     url: "https://github.com/firebird",
-    username: "@Firebird"
+    // username: "@Firebird"
   },
   {
     img: iconMedium,
     imgHover: iconMediumHover,
     label: "Medium",
     url: "https://medium.com/firebird",
-    username: "@Firebird"
+    // username: "@Firebird"
   },
   {
     img: iconReddit,
     imgHover: iconRedditHover,
     label: "Reddit",
     url: "https://www.reddit.com/r/firebird/",
-    username: "r/firebird"
+    // username: "r/firebird"
   },
   {
     img: iconAnnouncement,
@@ -68,12 +68,14 @@ type HeadDefaultTypes = {
   image: string
   title: string
   description: string
+  keywords: string
 }
 
 export const headDefault: HeadDefaultTypes = {
-  description:
-    "Build the next hassle-free and user-friendly NFT gaming & metaverse with Firebird.",
+  description: "Build your next scalable and intuitive dApps with Firebird",
   image:
     "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_firebird_ebe64c4845.png",
-  title: "Firebird"
+  title: "Firebird",
+  keywords:
+    "scalability, scalable, intuitive, optimization, near-zero costs, no security compromise"
 }

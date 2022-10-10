@@ -21,8 +21,7 @@ const ecosystemData: Array<EcosystemItemTypes> = [
     label: "Blockchain & Dapp Development",
     image: iconFirebird,
     title: "Firebird - Blockchain & Dapp Development",
-    description:
-      "The Firebird platform offers a basic foundation for a blockchain project to begin building and working on. As a result, it has a key place in the product life cycle and performs the most crucial function in the Firebird ecosystem."
+    description: `As the Firebird platform allows developers to kickstart building their products quickly, it not only plays a vital role in the product lifecycle but also responsible for the most crucial function in the ecosystem.`
   },
   {
     id: "3",
@@ -71,8 +70,7 @@ const Ecosystem = () => {
               "md:mt-2"
             )}
           >
-            {`Grow your project using the Firebird ecosystem's end-to-end
-            infrastructure.`}
+            {`Grow with Firebird's end-to-end infrastructure solution`}
           </p>
 
           <div className={clsx("flex flex-row", "md:hidden")}>
