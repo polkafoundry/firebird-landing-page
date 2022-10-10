@@ -99,13 +99,32 @@ const Partners = () => {
             Our partners
           </p>
 
-          <p className="mt-20 text-center font-semibold text-4xl max-w-[980px] mx-auto hidden md:block">
-            <span className="bg-main text-white px-1 rounded-md">
-              Quality partners
-            </span>{" "}
-            prioritize long-term development to provide cutting-edge user
-            experience and benefits
-          </p>
+          {/* <p className="mt-20 text-center font-semibold text-4xl max-w-[1080px] mx-auto hidden md:block">
+            Projects built on our{" "}
+            <span className="bg-main text-white px-1 rounded-md">Testnet</span>
+            <br />
+            <p className="m-0 ">
+              Testnet campaigns will{" "}
+              <span className="bg-main text-white px-1 rounded-md">
+                soon be launched
+              </span>{" "}
+              with the participation of partners, potential projects, and many
+              more
+            </p>
+          </p> */}
+          <div className="flex flex-col w-full md:px-[60px] mt-10">
+            <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
+              Projects built on our Testnet
+            </span>
+            <p
+              className={clsx(
+                "text-center text-3xl md:text-4xl max-w-[1080px] mx-auto font-semibold mt-2 mb-0",
+              )}
+            >
+              Testnet campaigns will soon be launched with the participation of
+              partners, potential projects, and many more
+            </p>
+          </div>
 
           <div
             className={clsx(
