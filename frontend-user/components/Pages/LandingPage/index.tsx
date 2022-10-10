@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import Backed from "./Backed"
+import Partners from "./Partners"
 import BirdNest from "./BirdNest"
 import Community from "./Community"
 import Ecosystem from "./Ecosystem"
@@ -29,7 +29,7 @@ const LandingPage = () => {
           </p>
           <p
             className={clsx(
-              "mt-5 text-lg font-birdMedium max-w-[640px] mx-auto",
+              "mt-5 text-lg font-birdMedium mx-auto",
               "xs:mt-8",
               "md:text-3xl md:mt-5"
             )}
@@ -52,7 +52,7 @@ const LandingPage = () => {
 
       <Roadmap />
 
-      <Backed />
+      <Partners />
 
       <Community />
     </div>

@@ -61,7 +61,7 @@ const partners: Array<PartnerTypes> = [
   }
 ]
 
-const Backed = () => {
+const Partners = () => {
   return (
     <div className={styles.bgBacked}>
       <div
@@ -108,9 +108,10 @@ const Backed = () => {
 
           <div
             className={clsx(
-              "w-full grid grid-cols-2 gap-3 mt-5 justify-center",
-              "xs:grid-cols-4",
-              "md:flex md:flex-wrap xs:mt-8 md:mt-7"
+              "w-full mx-auto grid grid-cols-2 gap-3 mt-5 justify-center",
+              "sm:grid-cols-4",
+              "md:flex md:flex-wrap xs:mt-8 md:mt-7",
+              "lg:grid-cols-4 lg:grid lg:w-fit"
             )}
           >
             {partners.map((item: PartnerTypes, index: number) => (
@@ -142,4 +143,4 @@ const Backed = () => {
   )
 }
 
-export default Backed
+export default Partners
