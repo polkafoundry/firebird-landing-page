@@ -61,7 +61,7 @@ const FirebirdCommunity = () => {
               <div className="flex flex-col w-full">
                 <span className="text-sm md:text-base">{item.label}</span>
                 <span className="text-lg md:text-[22px] md:leading-[32px] font-semibold">
-                  {item.username || "Updating"}
+                  {item.username || "Coming soon"}
                 </span>
               </div>
             </a>
