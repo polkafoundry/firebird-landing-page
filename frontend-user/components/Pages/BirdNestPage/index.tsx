@@ -6,6 +6,7 @@ import birdnestBlog from "/public/images/birdnest-blog.png"
 import birdnestDeveloper from "/public/images/birdnest-developer.png"
 import birdnestDocumentation from "/public/images/birdnest-documentation.png"
 
+import Button from "../../Base/Button"
 import ButtonLink from "../../Base/ButtonLink"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
@@ -62,13 +63,16 @@ const BirdNestPage = () => {
                 etc.
               </span>
               <div className="flex mt-3 md:mt-7">
-                <ButtonLink
+                {/* <ButtonLink
                   href={firebirdTechBlog}
                   target="_blank"
                   className="px-[43px] bg-black text-white"
                 >
                   Read now
-                </ButtonLink>
+                </ButtonLink> */}
+                <Button className="px-[43px] bg-black text-white">
+                  Revealed soon
+                </Button>
               </div>
             </div>
             <div

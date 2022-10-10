@@ -50,11 +50,14 @@ const FirebirdCommunity = () => {
               rel="noreferrer"
               className={clsx(
                 styles.cardCommunityHover,
-                "rounded-xl py-3 px-7 flex items-center gap-3"
+                "rounded-xl py-3 px-7 flex items-center gap-3",
+                { "pointer-events-none": !item.username }
               )}
               key={index + 2000}
             >
-              <Image src={item.img} alt="" width={40} height={40} />
+              <div className="relative w-10 h-10">
+                <Image src={item.img} alt="" layout="fixed" />
+              </div>
               <div className="flex flex-col w-full">
                 <span className="text-sm md:text-base">{item.label}</span>
                 <span className="text-lg md:text-[22px] md:leading-[32px] font-semibold">

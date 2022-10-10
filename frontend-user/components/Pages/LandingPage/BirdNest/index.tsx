@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
+import Button from "../../../Base/Button"
 import ButtonLink from "../../../Base/ButtonLink"
 import landingStyles from "../landing.module.scss"
 import styles from "./birdnest.module.scss"
@@ -69,13 +70,16 @@ const BirdNest = () => {
               events, partnerships, technological knowledge, and etc.
             </span>
             <div className={componentStyles.button}>
-              <ButtonLink
+              {/* <ButtonLink
                 href={firebirdTechBlog}
                 target="_blank"
                 className="px-[43px] bg-black text-white"
               >
                 Read now
-              </ButtonLink>
+              </ButtonLink> */}
+              <Button className="px-[43px] bg-black text-white">
+                Revealed soon
+              </Button>
             </div>
           </div>
           <div
