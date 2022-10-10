@@ -50,16 +50,16 @@ const partners: Array<PartnerTypes> = [
     name: "My Master War",
     uri: "https://mymasterwar.com/"
   },
-  // {
-  //   image: logoEvermoon,
-  //   name: "Evermoon",
-  //   uri: "https://www.evermoon.games/"
-  // },
-  // {
-  //   image: logoF2C,
-  //   name: "F2C",
-  //   uri: "https://f2nft.games/"
-  // }
+  {
+    image: logoEvermoon,
+    name: "Evermoon",
+    uri: "https://www.evermoon.games/"
+  },
+  {
+    image: logoF2C,
+    name: "F2C",
+    uri: "https://f2nft.games/"
+  }
 ]
 
 const Partners = () => {
@@ -112,7 +112,7 @@ const Partners = () => {
               "w-full mx-auto grid grid-cols-2 gap-3 mt-5 justify-center",
               "sm:grid-cols-4",
               "md:flex md:flex-wrap xs:mt-8 md:mt-7",
-              // "lg:grid-cols-4 lg:grid lg:w-fit"
+              "lg:grid-cols-4 lg:grid lg:w-fit"
             )}
           >
             {partners.map((item: PartnerTypes, index: number) => (
