@@ -27,7 +27,7 @@ const WhatIsFirebird = () => {
             className="font-semibold max-w-[720px] w-full text-3xl sm:text-5xl xs:text-4xl"
             data-aos="fade-up"
           >
-            {`Firebird's optimized chain allows `}
+            {`Firebird is optimized chain allows `}
             <span className="bg-black text-white rounded-md px-1">
               GameFi & Metaverse
             </span>{" "}
