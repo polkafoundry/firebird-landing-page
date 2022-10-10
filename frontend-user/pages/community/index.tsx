@@ -6,7 +6,7 @@ const Community = () => {
     <>
       <DefaultLayout
         title="Firebird Community"
-        description="A space for all blockchain enthusiasts. Developers, investors, users, etc., everyone is welcome!"
+        description="An organized universe for all blockchain builders, investors, enthusiasts, and ecosystem users. Start turning your dreams into reality today."
       >
         <CommunityPage />
       </DefaultLayout>

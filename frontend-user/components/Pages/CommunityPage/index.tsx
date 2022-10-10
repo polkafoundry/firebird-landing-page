@@ -21,8 +21,9 @@ const CommunityPage = () => {
             Firebird Community
           </p>
           <p className="mt-5 text-lg md:text-3xl font-birdMedium max-w-[640px] mx-auto">
-            A space for all blockchain enthusiasts. Developers, investors,
-            users, etc., everyone is welcome!
+            An organized universe for all blockchain builders, investors,
+            enthusiasts, and ecosystem users. Start turning your dreams into
+            reality today.
           </p>
         </div>
       </div>

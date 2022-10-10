@@ -35,7 +35,7 @@ const LandingPage = () => {
             )}
             data-aos="fade-up"
           >
-            Build your next scalable and intuitive dApps with Firebird
+            Build scalable and intuitive Web3 games with Firebird
           </p>
         </div>
       </div>
