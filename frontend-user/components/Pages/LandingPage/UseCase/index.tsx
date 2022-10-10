@@ -73,7 +73,7 @@ const UseCase = () => {
 
           <div className="flex mt-5 md:mt-7">
             <ButtonLink
-              href="https://docs.firebirdchain.com/use-cases/what-you-can-build"
+              href="https://docs.firebirdchain.com/firebird-whitepaper/use-cases/what-you-can-build"
               target="_blank"
               className="text-white px-12 bg-main"
             >
