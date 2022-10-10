@@ -31,7 +31,7 @@ const siteMaps = [
   },
   {
     label: "Documentation",
-    url: "https://firebird-1.gitbook.io/firebird-whitepaper/"
+    url: "https://docs.firebirdchain.com/"
   },
   {
     label: "Community",

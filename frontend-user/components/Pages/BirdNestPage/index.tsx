@@ -152,7 +152,7 @@ const BirdNestPage = () => {
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink
-                  href="https://firebird-1.gitbook.io/firebird-whitepaper/"
+                  href="https://docs.firebirdchain.com/"
                   target="_blank"
                   className="px-[43px] bg-black text-white"
                 >

@@ -152,7 +152,7 @@ const BirdNest = () => {
             </span>
             <div className={componentStyles.button}>
               <ButtonLink
-                href="https://firebird-1.gitbook.io/firebird-whitepaper/"
+                href="https://docs.firebirdchain.com/"
                 target="_blank"
                 className="px-[43px] bg-black text-white"
               >

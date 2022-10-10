@@ -25,7 +25,7 @@ const routes: Array<RouteTypes> = [
   },
   {
     label: "Documentation",
-    uri: "https://firebird-1.gitbook.io/firebird-whitepaper/"
+    uri: "https://docs.firebirdchain.com/"
   },
   {
     label: "FAQ",
