@@ -11,7 +11,7 @@ import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
 
 const firebirdTechBlog =
-  process.env.FIREBIRD_TECH_BLOG || "http://techblog-firebirdchain.com"
+  process.env.FIREBIRD_TECH_BLOG || "http://techblog.firebirdchain.com"
 
 const BirdNestPage = () => {
   return (
