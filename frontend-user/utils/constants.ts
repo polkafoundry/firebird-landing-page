@@ -51,7 +51,7 @@ export const socialsData: Array<SocialItemTypes> = [
   {
     img: iconAnnouncement,
     imgHover: iconAnnouncementHover,
-    label: "Annoucement Channel",
+    label: "Announcement Channel",
     url: "https://t.me/FirebirdANN",
     username: "@FirebirdANN"
   },

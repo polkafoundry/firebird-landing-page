@@ -42,7 +42,7 @@ const faqs: Array<FaqTypes> = [
     id: 5,
     question: "Why did Firebird build with Cosmos SDK?",
     answer: `Cosmos is an internet of blockchains. Cosmos will make it simple to develop blockchain technology by overcoming the primary problems of earlier blockchain efforts and enabling chain interoperability.  Additionally, Cosmos SDK seeks to address the modern blockchain infrastructure's scalability, usability, and sovereignty.
-    By leveraging the aforementioned benefits of Cosmos, Firebird provides a platform that makes it possible to construct blockchain applications, Web3 games and services that are strong, robust, secure, interoperable, and easy to use.`
+    By leveraging the aforementioned benefits of Cosmos, Firebird provides a platform that makes it possible to construct blockchain applications, Web3 games and services that are robust, secure, interoperable, and easy to use.`
   },
   {
     id: 6,

@@ -34,7 +34,7 @@ const FirebirdCommunity = () => {
 
       <div className="flex flex-col pt-3">
         <p className="text-sm xs:text-22px md:text-lg text-center md:text-left">
-          {`Need more information about Firebird? Follow us on official groups and channels to not miss out on anything!`}
+          {`Need more information about Firebird? Follow us on official groups and channels not to miss out on anything!`}
         </p>
 
         <div
