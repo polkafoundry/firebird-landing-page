@@ -38,8 +38,8 @@ export const socialsData: Array<SocialItemTypes> = [
     img: iconMedium,
     imgHover: iconMediumHover,
     label: "Medium",
-    url: "https://medium.com/firebird"
-    // username: "@Firebird"
+    url: "https://medium.com/firebirdchain",
+    username: "@Firebirdchain"
   },
   {
     img: iconReddit,
