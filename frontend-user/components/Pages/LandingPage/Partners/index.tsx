@@ -35,11 +35,11 @@ const partners: Array<PartnerTypes> = [
     name: "Monsterra",
     uri: "https://monsterra.io/"
   },
-  {
-    image: logoFaraland,
-    name: "Faraland",
-    uri: "https://faraland.io/"
-  },
+  // {
+  //   image: logoFaraland,
+  //   name: "Faraland",
+  //   uri: "https://faraland.io/"
+  // },
   {
     image: logoWanaka,
     name: "Wanaka",
@@ -118,7 +118,7 @@ const Partners = () => {
             </span>
             <p
               className={clsx(
-                "text-center text-3xl md:text-4xl max-w-[1080px] mx-auto font-semibold mt-2 mb-0",
+                "text-center text-3xl md:text-4xl max-w-[1080px] mx-auto font-semibold mt-2 mb-0"
               )}
             >
               Testnet campaigns will soon be launched with the participation of
@@ -130,8 +130,8 @@ const Partners = () => {
             className={clsx(
               "w-full mx-auto grid grid-cols-2 gap-3 mt-5 justify-center",
               "sm:grid-cols-4",
-              "md:flex md:flex-wrap xs:mt-8 md:mt-7 justify-center",
-              "lg:grid-cols-4 lg:grid lg:w-fit"
+              "md:flex md:flex-wrap xs:mt-8 md:mt-7 justify-center"
+              // "lg:grid-cols-4 lg:grid lg:w-fit"
             )}
           >
             {partners.map((item: PartnerTypes, index: number) => (
