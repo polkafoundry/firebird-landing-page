@@ -121,8 +121,8 @@ const Partners = () => {
                 "text-center text-3xl md:text-4xl max-w-[1080px] mx-auto font-semibold mt-2 mb-0"
               )}
             >
-              Testnet campaigns will soon be launched with the participation of
-              partners, potential projects, and many more
+              Testnet version 1 has officially launched with the cooperation of
+              six potential projects
             </p>
           </div>
 
