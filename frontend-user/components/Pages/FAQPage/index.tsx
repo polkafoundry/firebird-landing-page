@@ -1,11 +1,11 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import styles from "./faq.module.scss"
 
-import iconSearch from "/public/images/icon-search-white.svg"
 import iconMinus from "/public/images/icon-minus.svg"
 import iconPlus from "/public/images/icon-plus.svg"
+import iconSearch from "/public/images/icon-search-white.svg"
 
 type FaqTypes = {
   id: number
@@ -67,10 +67,12 @@ const faqs: Array<FaqTypes> = [
 const FAQPage = () => {
   const answersRef = useRef([])
   const questionsRef = useRef([])
+  const questionBoxRef = useRef([])
   const [faqData, setFaqData] = useState<Array<FaqTypes>>(faqs)
 
   const [inputSearch, setInputSearch] = useState<string>("")
   const [expandedIds, setExpandedIds] = useState<Array<number>>([])
+  const [questionBoxHeight, setQuestionBoxHeight] = useState<any>([])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -93,9 +95,12 @@ const FAQPage = () => {
     setInputSearch(e.target.value)
   }
 
-  const checkIsExpanded = (id: number) => {
-    return expandedIds.includes(id)
-  }
+  const checkIsExpanded = useCallback(
+    (id: number) => {
+      return expandedIds.includes(id)
+    },
+    [expandedIds]
+  )
 
   const handleSelectId = (id: number) => {
     let newIds = [...expandedIds]
@@ -103,7 +108,30 @@ const FAQPage = () => {
       ? newIds.filter((item) => item !== id)
       : [...newIds, ...[id]]
     setExpandedIds(newIds)
+    setSize()
   }
+
+  const setSize = useCallback(() => {
+    const heights = faqs.map((item, index) =>
+      checkIsExpanded(item.id)
+        ? `${
+            questionsRef?.current[index]?.clientHeight +
+            answersRef?.current[index]?.clientHeight +
+            68
+          }px`
+        : `${(questionsRef?.current[index]?.clientHeight || 32) + 48}px`
+    )
+    setQuestionBoxHeight(heights)
+  }, [checkIsExpanded])
+
+  useEffect(() => {
+    setSize()
+    window.addEventListener("resize", setSize)
+
+    return () => {
+      window.removeEventListener("resize", setSize)
+    }
+  }, [setSize])
 
   return (
     <div className="flex flex-col w-full">
@@ -154,34 +182,29 @@ const FAQPage = () => {
         >
           {faqData.map((item: FaqTypes, index: number) => (
             <div
+              ref={(el) => (questionBoxRef.current[index] = el)}
               key={item.id}
               className={clsx(
                 "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px] overflow-hidden",
                 checkIsExpanded(item.id) ? styles.expanded : styles.closed
               )}
               style={{
-                maxHeight: checkIsExpanded(item.id)
-                  ? `${
-                      questionsRef?.current[index]?.clientHeight +
-                      answersRef?.current[index]?.clientHeight +
-                      68
-                    }px`
-                  : `${
-                      (questionsRef?.current[index]?.clientHeight || 32) + 48
-                    }px`
+                maxHeight: questionBoxHeight[index]
               }}
               onClick={() => handleSelectId(item.id)}
             >
-              <p
+              <div
                 ref={(el) => (questionsRef.current[index] = el)}
-                className="text-2xl font-semibold flex justify-between"
+                className="text-2xl font-semibold flex justify-between gap-2"
               >
-                {item.question}
-                <Image
-                  src={checkIsExpanded(item.id) ? iconMinus : iconPlus}
-                  alt=""
-                />
-              </p>
+                <p className="flex-1">{item.question}</p>
+                <div className="relative w-5 h-5">
+                  <Image
+                    src={checkIsExpanded(item.id) ? iconMinus : iconPlus}
+                    alt=""
+                  />
+                </div>
+              </div>
               <div
                 ref={(el) => (answersRef.current[index] = el)}
                 className={
