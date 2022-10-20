@@ -142,13 +142,13 @@ const FAQPage = () => {
               {({ open }) => (
                 <div
                   className={clsx(
-                    "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px] overflow-hidden",
+                    "flex flex-col w-full cursor-pointer rounded-[20px] overflow-hidden transition-colors",
                     open ? "bg-black text-white" : "bg-white text-black"
                   )}
                 >
                   <Disclosure.Button
                     className={clsx(
-                      "text-2xl font-semibold flex justify-between items-start gap-2 outline-none"
+                      "text-2xl font-semibold flex justify-between items-start gap-2 outline-none py-6 px-8"
                     )}
                   >
                     <span className="flex-1 block text-left">
@@ -160,15 +160,24 @@ const FAQPage = () => {
                   </Disclosure.Button>
                   <Transition
                     className="overflow-hidden"
-                    enter="transition transition-[max-height] duration-300 ease-in"
+                    enter="transition transition-[max-height] duration-500 ease-in"
                     enterFrom="transform max-h-0"
                     enterTo="transform max-h-screen"
-                    leave="transition transition-[max-height] duration-300 ease-out"
+                    leave="transition transition-[max-height] duration-500 ease-out"
                     leaveFrom="transform max-h-screen"
                     leaveTo="transform max-h-0"
                   >
-                    <Disclosure.Panel className="text-lg opacity-80 mt-5 whitespace-pre-line break-words">
-                      {item.answer}
+                    <Disclosure.Panel className="text-lg opacity-80 whitespace-pre-line break-words">
+                      {({ close }) => (
+                        <span
+                          className="pb-6 px-8 block"
+                          onClick={() => {
+                            close()
+                          }}
+                        >
+                          {item.answer}
+                        </span>
+                      )}
                     </Disclosure.Panel>
                   </Transition>
                 </div>
