@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.3",
     "@netlify/plugin-nextjs": "^4.23.3",
     "@tippyjs/react": "^4.2.6",
     "aos": "^2.3.4",

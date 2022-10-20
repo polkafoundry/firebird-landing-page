@@ -1,8 +1,9 @@
 import clsx from "clsx"
 import Image from "next/image"
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./faq.module.scss"
 
+import { Disclosure, Transition } from "@headlessui/react"
 import iconMinus from "/public/images/icon-minus.svg"
 import iconPlus from "/public/images/icon-plus.svg"
 import iconSearch from "/public/images/icon-search-white.svg"
@@ -65,14 +66,8 @@ const faqs: Array<FaqTypes> = [
 ]
 
 const FAQPage = () => {
-  const answersRef = useRef([])
-  const questionsRef = useRef([])
-  const questionBoxRef = useRef([])
   const [faqData, setFaqData] = useState<Array<FaqTypes>>(faqs)
-
   const [inputSearch, setInputSearch] = useState<string>("")
-  const [expandedIds, setExpandedIds] = useState<Array<number>>([])
-  const [questionBoxHeight, setQuestionBoxHeight] = useState<any>([])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -94,44 +89,6 @@ const FAQPage = () => {
   const handleSearch = (e: any) => {
     setInputSearch(e.target.value)
   }
-
-  const checkIsExpanded = useCallback(
-    (id: number) => {
-      return expandedIds.includes(id)
-    },
-    [expandedIds]
-  )
-
-  const handleSelectId = (id: number) => {
-    let newIds = [...expandedIds]
-    newIds = checkIsExpanded(id)
-      ? newIds.filter((item) => item !== id)
-      : [...newIds, ...[id]]
-    setExpandedIds(newIds)
-    setSize()
-  }
-
-  const setSize = useCallback(() => {
-    const heights = faqs.map((item, index) =>
-      checkIsExpanded(item.id)
-        ? `${
-            questionsRef?.current[index]?.clientHeight +
-            answersRef?.current[index]?.clientHeight +
-            68
-          }px`
-        : `${(questionsRef?.current[index]?.clientHeight || 32) + 48}px`
-    )
-    setQuestionBoxHeight(heights)
-  }, [checkIsExpanded])
-
-  useEffect(() => {
-    setSize()
-    window.addEventListener("resize", setSize)
-
-    return () => {
-      window.removeEventListener("resize", setSize)
-    }
-  }, [setSize])
 
   return (
     <div className="flex flex-col w-full">
@@ -180,40 +137,43 @@ const FAQPage = () => {
             "md:px-10 md:pt-20 md:pb-[160px]"
           )}
         >
-          {faqData.map((item: FaqTypes, index: number) => (
-            <div
-              ref={(el) => (questionBoxRef.current[index] = el)}
-              key={item.id}
-              className={clsx(
-                "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px] overflow-hidden",
-                checkIsExpanded(item.id) ? styles.expanded : styles.closed
-              )}
-              style={{
-                maxHeight: questionBoxHeight[index]
-              }}
-              onClick={() => handleSelectId(item.id)}
-            >
-              <div
-                ref={(el) => (questionsRef.current[index] = el)}
-                className="text-2xl font-semibold flex justify-between gap-2"
-              >
-                <p className="flex-1">{item.question}</p>
-                <div className="relative w-5 h-5">
-                  <Image
-                    src={checkIsExpanded(item.id) ? iconMinus : iconPlus}
-                    alt=""
-                  />
+          {faqData.map((item) => (
+            <Disclosure key={item.id}>
+              {({ open }) => (
+                <div
+                  className={clsx(
+                    "flex flex-col w-full cursor-pointer py-6 px-8 rounded-[20px] overflow-hidden",
+                    open ? "bg-black text-white" : "bg-white text-black"
+                  )}
+                >
+                  <Disclosure.Button
+                    className={clsx(
+                      "text-2xl font-semibold flex justify-between items-start gap-2 outline-none"
+                    )}
+                  >
+                    <span className="flex-1 block text-left">
+                      {item.question}
+                    </span>
+                    <div className="relative w-5 h-5">
+                      <Image src={open ? iconMinus : iconPlus} alt="" />
+                    </div>
+                  </Disclosure.Button>
+                  <Transition
+                    className="overflow-hidden"
+                    enter="transition transition-[max-height] duration-300 ease-in"
+                    enterFrom="transform max-h-0"
+                    enterTo="transform max-h-screen"
+                    leave="transition transition-[max-height] duration-300 ease-out"
+                    leaveFrom="transform max-h-screen"
+                    leaveTo="transform max-h-0"
+                  >
+                    <Disclosure.Panel className="text-lg opacity-80 mt-5 whitespace-pre-line break-words">
+                      {item.answer}
+                    </Disclosure.Panel>
+                  </Transition>
                 </div>
-              </div>
-              <div
-                ref={(el) => (answersRef.current[index] = el)}
-                className={
-                  "text-lg opacity-80 mt-5 whitespace-pre-line break-words"
-                }
-              >
-                {item.answer}
-              </div>
-            </div>
+              )}
+            </Disclosure>
           ))}
         </div>
       </div>
