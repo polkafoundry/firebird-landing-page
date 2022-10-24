@@ -72,7 +72,6 @@ const Roadmap = () => {
     setProgressWidth(getProgressWidth())
 
     window.addEventListener("resize", () => {
-      console.log(window.innerHeight, window.innerWidth)
       setProgressWidth(getProgressWidth())
     })
   }, [])

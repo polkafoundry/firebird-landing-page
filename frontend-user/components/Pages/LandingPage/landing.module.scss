@@ -13,6 +13,21 @@
     background-size: cover;
   }
 }
+.rebrand {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  border-radius: 12px;
+  gap: 12px;
+  background: url("/images/banner-rebrand.svg") no-repeat center right;
+  background-size: cover;
+  @media (max-width: theme("screens.xs")) {
+    display: none;
+    min-height: 180px;
+  }
+}
 .cardHover {
   background: white;
   color: black;

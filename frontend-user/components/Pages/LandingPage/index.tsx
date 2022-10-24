@@ -8,6 +8,15 @@ import Roadmap from "./Roadmap"
 import UseCase from "./UseCase"
 import WhatIsFirebird from "./WhatIsFirebird"
 import WhyFirebird from "./WhyFirebird"
+import Image from "next/image"
+import Link from "next/link"
+
+import bannerRebrandXs from "/public/images/banner-rebrand-xs.png"
+import bannerBell from "/public/images/banner-bell.png"
+import bannerSubBg from "/public/images/banner-rebrand-sub.png"
+
+const REBRAND_INFO_URL =
+  "https://medium.com/polkafoundry/polkafoundry-rebrands-as-firebird-game-dedicated-web2-friendly-high-performance-blockchain-ff7972c3e2f6"
 
 const LandingPage = () => {
   return (
@@ -16,13 +25,59 @@ const LandingPage = () => {
         <div
           className={clsx(
             styles.section,
-            "flex flex-col px-8 md:px-40 text-center md:justify-center"
+            "flex flex-col px-8 md:px-[120px] lg:px-40 text-center"
           )}
         >
+          <div
+            className={clsx(styles.rebrand, "py-7 px-5 md:px-10 lg:px-[90px]")}
+          >
+            <div className="relative pt-2">
+              <Image src={bannerBell} alt="" />
+            </div>
+            <div
+              className={clsx(
+                "absolute top-[15%] right-0 z-0",
+                "xl:right-[5%]"
+              )}
+            >
+              <Image src={bannerSubBg} alt="" />
+            </div>
+
+            <div
+              className={clsx(
+                "flex flex-col text-left z-[1] max-w-[50%]",
+                "lg:max-w-[60%]"
+              )}
+            >
+              <span className="uppercase text-xl lg:text-2xl font-semibold">
+                PolkaFoundry has rebranded as Firebird
+              </span>
+              <p className="m-0">
+                See more information{" "}
+                <a
+                  href={REBRAND_INFO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-main font-semibold"
+                >
+                  HERE
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <Link href={REBRAND_INFO_URL}>
+            <a target="_blank" rel="norefferer">
+              <div className="relative xs:hidden">
+                <Image src={bannerRebrandXs} alt="" />
+              </div>
+            </a>
+          </Link>
+
           <p
             className={clsx(
-              "md:-mt-20 md:text-[140px] md:leading-[140px]",
-              "mt-32 text-6xl font-birdMedium font-semibold"
+              "md:text-[140px] md:leading-[140px]",
+              "mt-6 text-6xl font-birdMedium font-semibold"
             )}
           >
             Firebird

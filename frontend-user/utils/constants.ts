@@ -76,5 +76,5 @@ export const headDefault: HeadDefaultTypes = {
   image: "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_2_7bc61c9253.png",
   title: "Firebird",
   keywords:
-    "scalability, scalable, intuitive, optimization, near-zero costs, no security compromise"
+    "firebird, firebird chain, firebird token, firebird crypto, scalability, scalable, intuitive, optimization, near-zero costs, no security compromise"
 }
