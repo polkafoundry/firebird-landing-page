@@ -3,6 +3,8 @@ import Image, { StaticImageData } from "next/image"
 import landingStyles from "../landing.module.scss"
 import styles from "./backed.module.scss"
 
+import redkite from "/public/images/redkite-launchpad.png"
+
 import logoAspo from "/public/images/partners/aspo.png"
 import logoEvermoon from "/public/images/partners/evermoon.png"
 import logoF2C from "/public/images/partners/f2c.png"
@@ -12,6 +14,7 @@ import logoMonsterra from "/public/images/partners/monsterra.png"
 import logoNFTTrade from "/public/images/partners/nft-trade.png"
 import logoFaraland from "/public/images/partners/faraland.png"
 import logoWanaka from "/public/images/partners/wanaka.png"
+import ButtonLink from "../../../Base/ButtonLink"
 
 type PartnerTypes = {
   name: string
@@ -68,50 +71,17 @@ const Partners = () => {
       <div
         className={clsx(
           landingStyles.section,
-          "px-5 xs:px-16 md:px-[138px] pt-[60px] xs:pt-20"
+          "px-5 pt-[60px]",
+          "lg:px-[138px]",
+          "md:px-[120px]",
+          "xs:pt-20 xs:px-16"
         )}
       >
         <div className="flex flex-col justify-center">
-          {/* <p className="text-4xl font-semibold text-center w-full">Backed by</p>
-          <a
-            href="https://icetea.io/"
-            target="_blank"
-            rel="noreferrer"
-            className={clsx(
-              "flex flex-col px-12 pt-10 pb-7 mt-7 bg-white w-fit mx-auto rounded-[32px] justify-center",
-              "xs:mt-8",
-              "md:mt-7"
-            )}
-          >
-            <div className="relative mx-auto">
-              <Image
-                src="/images/logo-icetea.svg"
-                alt=""
-                width={90}
-                height={90}
-                layout="fixed"
-              />
-            </div>
-            <p className="text-center text-xl font-semibold">Icetea Labs</p>
-          </a> */}
-
           <p className="mt-[60px] text-center font-semibold text-4xl xs:mt-20 md:hidden">
             Our partners
           </p>
 
-          {/* <p className="mt-20 text-center font-semibold text-4xl max-w-[1080px] mx-auto hidden md:block">
-            Projects built on our{" "}
-            <span className="bg-main text-white px-1 rounded-md">Testnet</span>
-            <br />
-            <p className="m-0 ">
-              Testnet campaigns will{" "}
-              <span className="bg-main text-white px-1 rounded-md">
-                soon be launched
-              </span>{" "}
-              with the participation of partners, potential projects, and many
-              more
-            </p>
-          </p> */}
           <div className="flex flex-col w-full md:px-[60px] mt-10">
             <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
               Projects built on our Testnet
@@ -157,6 +127,63 @@ const Partners = () => {
                 <p className="font-semibold mt-1">{item.name}</p>
               </a>
             ))}
+          </div>
+
+          <div className="mt-[120px] flex flex-col">
+            <span className="text-center text-4xl font-semibold">In-house</span>
+            <div
+              className={clsx(
+                "flex mt-10 items-center flex-col-reverse",
+                "md:flex-row"
+              )}
+            >
+              <div
+                className={clsx(
+                  "w-full flex flex-col text-center",
+                  "lg:px-10 md:pr-10 md:w-1/2 md:text-left"
+                )}
+              >
+                <span
+                  className={clsx(
+                    "font-semibold text-xl",
+                    "xs:text-3xl md:text-2xl lg:text-32px"
+                  )}
+                >
+                  A cutting-edge launchpad powered by Firebird as a part of the
+                  growing $PKF ecosystem
+                </span>
+                <span
+                  className={clsx(
+                    "mt-3 text-sm",
+                    "xs:text-22px md:text-base lg:text-xl"
+                  )}
+                >
+                  Red Kite is one of the leading launchpads in the world with
+                  70+ projects that have successfully launched, a seasoned
+                  leadership team, a network of high-class VCs and marketing
+                  partners, vibrant communities, and many more.{" "}
+                </span>
+                <div className="flex mt-7">
+                  <ButtonLink
+                    href="https://redkitepad.com/"
+                    target="_blank"
+                    className="px-[43px] bg-black text-white mx-auto md:mx-0"
+                  >
+                    Discover More
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div
+                className={clsx(
+                  "w-full relative mb-8 flex justify-center",
+                  "md:w-1/2 md:mb-0"
+                )}
+                data-aos="zoom-in"
+              >
+                <Image src={redkite} alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

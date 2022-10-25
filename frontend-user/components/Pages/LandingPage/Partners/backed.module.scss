@@ -1,5 +1,8 @@
 .bgBacked {
   width: 100%;
-  // background: url(/images/landing-bg-backed-1.svg) left top no-repeat;
-  // background-size: auto;
+  background: url(/images/partners-sub-bg-1.svg) left 80% no-repeat;
+
+  @media (max-width: theme("screens.md")) {
+    background: none;
+  }
 }

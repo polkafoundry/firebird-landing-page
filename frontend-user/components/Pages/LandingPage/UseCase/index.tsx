@@ -38,9 +38,10 @@ const UseCase = () => {
     <div
       className={clsx(
         styles.section,
-        "px-8 py-[60px] md:px-[160px] text-center",
-        "xs:px-[60px] xs:py-[120px]",
-        "xs:text-left"
+        "px-8 py-[60px] text-center",
+        "lg:px-[160px]",
+        "md:px-[120px]",
+        "xs:px-[60px] xs:py-[120px] xs:text-left"
       )}
     >
       <span className="text-main uppercase font-semibold font-birdMedium text-center tracking-wider text-sm md:text-base">
