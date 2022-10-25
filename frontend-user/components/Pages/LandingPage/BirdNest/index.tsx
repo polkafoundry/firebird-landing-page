@@ -86,7 +86,7 @@ const BirdNest = () => {
             className="flex max-w-[640px] drop-shadow-xl items-center"
             data-aos="fade-right"
           >
-            <Image src={birdnestBlog} alt="" objectFit="contain" />
+            <Image src={birdnestBlog} alt="" objectFit="contain" priority />
           </div>
         </div>
 
@@ -144,7 +144,12 @@ const BirdNest = () => {
             </div>
           </div>
           <div className="flex max-w-[640px] items-center" data-aos="fade-left">
-            <Image src={birdnestDeveloper} alt="" objectFit="contain" />
+            <Image
+              src={birdnestDeveloper}
+              alt=""
+              objectFit="contain"
+              priority
+            />
           </div>
         </div>
 
@@ -182,7 +187,12 @@ const BirdNest = () => {
             className="flex max-w-[640px] items-center"
             data-aos="fade-right"
           >
-            <Image src={birdnestDocumentation} alt="" objectFit="contain" />
+            <Image
+              src={birdnestDocumentation}
+              alt=""
+              objectFit="contain"
+              priority
+            />
           </div>
         </div>
       </div>

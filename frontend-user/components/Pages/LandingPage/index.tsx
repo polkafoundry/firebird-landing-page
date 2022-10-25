@@ -77,7 +77,7 @@ const LandingPage = () => {
           <p
             className={clsx(
               "md:text-[140px] md:leading-[140px]",
-              "mt-6 text-6xl font-birdMedium font-semibold"
+              "mt-[5%] text-6xl font-birdMedium font-semibold"
             )}
           >
             Firebird
