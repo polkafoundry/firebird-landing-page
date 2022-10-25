@@ -21,7 +21,7 @@ const ecosystemData: Array<EcosystemItemTypes> = [
     label: "Blockchain & Dapp Development",
     image: iconFirebird,
     title: "Firebird - Blockchain & Dapp Development",
-    description: `As the Firebird platform allows developers to kickstart building their products quickly, it does not only play a vital role in the product lifecycle but it is also responsible for the most crucial function in the ecosystem.`
+    description: `As the Firebird platform empowers developers to kickstart building their products quickly, it plays a vital role in the product lifecycle and is responsible for the most crucial function in the ecosystem.`
   },
   {
     id: "3",

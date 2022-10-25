@@ -10,6 +10,7 @@ import Button from "../../Base/Button"
 import ButtonLink from "../../Base/ButtonLink"
 import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
+import { birdnestData } from "../../../utils/constants"
 
 const firebirdTechBlog =
   process.env.FIREBIRD_TECH_BLOG || "http://techblog.firebirdchain.com"
@@ -55,12 +56,10 @@ const BirdNestPage = () => {
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
-                The Firebird Blog
+                {birdnestData.blog.title}
               </p>
               <span className="mt-4 text-sm md:text-base">
-                Discover our latest news, including updates, research,
-                analytics, events, partnerships, technological knowledge, and
-                etc.
+                {birdnestData.blog.description}
               </span>
               <div className="flex mt-3 md:mt-7">
                 {/* <ButtonLink
@@ -71,7 +70,7 @@ const BirdNestPage = () => {
                   Read now
                 </ButtonLink> */}
                 <Button className="px-[43px] bg-black text-white">
-                  Revealed soon
+                  Coming soon
                 </Button>
               </div>
             </div>
@@ -96,10 +95,10 @@ const BirdNestPage = () => {
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
-                Developer Hub
+                {birdnestData.hub.title}
               </p>
               <span className="mt-4 text-sm md:text-base">
-                {`An optimal space designed for developers. Start exploring technological architecture and actualize your blockchain ideas with Firebird Developer Hub.`}
+                {birdnestData.hub.description}
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <Button className="px-[33px] bg-black text-white">
@@ -165,10 +164,10 @@ const BirdNestPage = () => {
               )}
             >
               <p className="text-3xl mt-3 md:mt-0 md:text-4xl font-semibold font-birdMedium">
-                Firebird Documentation
+                {birdnestData.documentation.title}
               </p>
               <span className="mt-4 text-sm md:text-base">
-                {`Read more about the Firebird ecosystem’s features, solutions, infrastructure, roadmap, etc., and understand why our journey started.`}
+                {birdnestData.documentation.description}
               </span>
               <div className="flex mt-3 md:mt-7 gap-2">
                 <ButtonLink

@@ -18,7 +18,7 @@ const faqs: Array<FaqTypes> = [
   {
     id: 1,
     question: "What is Firebird?",
-    answer: `Firebird is a stand-alone chain built with Cosmos SDK designed specifically for Web3 games and metaverse. It allows developers to create scalable and user-friendly real-time dApps with cheap costs and fast speed without ever compromising security. With Firebird, we focus on blockchain performance to boost users’ gaming experience and aim to create an efficient chain that enables fast and low-cost transactions, facilitating easy trading for in-game assets.`
+    answer: `Firebird is a standalone chain built with Cosmos SDK, designed to build scalable and intuitive real-time apps under low costs and rapid development while preserving security. In addition, we prioritize blockchain performance to boost the gaming experience and provide an efficient chain that enables fast and cut-rate transactions, facilitating easy trading of in-game assets.`
   },
   {
     id: 2,
@@ -41,9 +41,8 @@ const faqs: Array<FaqTypes> = [
   },
   {
     id: 5,
-    question: "Why did Firebird build with Cosmos SDK?",
-    answer: `Cosmos is an internet of blockchains. Cosmos will make it simple to develop blockchain technology by overcoming the primary problems of earlier blockchain efforts and enabling chain interoperability.  Additionally, Cosmos SDK seeks to address the modern blockchain infrastructure's scalability, usability, and sovereignty.
-    By leveraging the aforementioned benefits of Cosmos, Firebird provides a platform that makes it possible to construct blockchain applications, Web3 games and services that are robust, secure, interoperable, and easy to use.`
+    question: "Why did Firebird choose to build with Cosmos SDK?",
+    answer: `Cosmos SDK is a developer-friendly, modular framework powered by the Tendermint BFT. By choosing a solution that solves some of the hardest blockchain problems of scalability, usability, and interoperability, Firebird leverages our industry expertise and experience to bring about a powerful platform that makes building blockchains simple, seamless, and secure.`
   },
   {
     id: 6,

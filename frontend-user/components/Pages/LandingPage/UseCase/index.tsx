@@ -29,8 +29,7 @@ const usecases: Array<UseCaseTypes> = [
   {
     title: "AR - VR & Metaverse",
     image: imgMetaverse,
-    detail:
-      "The Firebird's cross-chain protocol is an ideal solution to ensuring data acquisition, storage, interoperability, and privacy preservation, which are the metaverse's main driving forces."
+    detail: `Firebird's ideal cross-chain protocol ensures seamless data acquisition, storage, interoperability, and privacy reservation.`
   }
 ]
 
@@ -62,13 +61,11 @@ const UseCase = () => {
               "md:text-4xl md:mt-3"
             )}
           >
-            Turn your dream blockchain ideas into reality with our holistic
-            platform
+            {`Turn your blockchain visionaries into reality with Firebird's holistic platform`}
           </p>
           <span className="mt-5 text-14px md:text-lg">
-            Firebird offers you the flexibility, security, reliability, and
-            community to build scalable and user-friendly dApps in the
-            blockchain world.
+            Firebird provides flexibility, security, reliability, and community
+            to build scalable and user-friendly Web3 apps on the blockchain.
           </span>
 
           <div className="flex mt-5 md:mt-7">

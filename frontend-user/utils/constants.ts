@@ -72,9 +72,25 @@ type HeadDefaultTypes = {
 }
 
 export const headDefault: HeadDefaultTypes = {
-  description: "Build scalable and intuitive Web3 games with Firebird",
+  description: "Build scalable and frictionless Web3 games with Firebird",
   image: "https://d1j2c9jkfhu70p.cloudfront.net/Thumbnail_2_7bc61c9253.png",
   title: "Firebird",
   keywords:
     "firebird, firebird chain, firebird token, firebird crypto, scalability, scalable, intuitive, optimization, near-zero costs, no security compromise"
+}
+
+export const birdnestData = {
+  blog: {
+    title: "The Firebird Blog",
+    description:
+      "Discover our latest news, including updates, research, analytics, events, and technical knowledge."
+  },
+  hub: {
+    title: "Developer Hub",
+    description: `An optimal space designed for developers. Start exploring technological architecture and actualizing your blockchain ideas with Firebird Developer Hub today.`
+  },
+  documentation: {
+    title: "Firebird Documentation",
+    description: `Read more about the Firebird ecosystem’s features, solutions, infrastructure, roadmap, etc., and understand why our journey started.`
+  }
 }

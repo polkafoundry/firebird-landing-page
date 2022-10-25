@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import Image from "next/image"
+import { birdnestData } from "../../../../utils/constants"
 import Button from "../../../Base/Button"
 import ButtonLink from "../../../Base/ButtonLink"
 import landingStyles from "../landing.module.scss"
@@ -64,10 +65,9 @@ const BirdNest = () => {
               "md:pr-5 md:text-left md:items-start md:max-w-[440px]"
             )}
           >
-            <p className={componentStyles.title}>The Firebird Blog</p>
+            <p className={componentStyles.title}>{birdnestData.blog.title}</p>
             <span className={componentStyles.description}>
-              Discover our latest news, including updates, research, analytics,
-              events, partnerships, technological knowledge, and etc.
+              {birdnestData.blog.description}
             </span>
             <div className={componentStyles.button}>
               {/* <ButtonLink
@@ -78,7 +78,7 @@ const BirdNest = () => {
                 Read now
               </ButtonLink> */}
               <Button className="px-[43px] bg-black text-white">
-                Revealed soon
+                Coming soon
               </Button>
             </div>
           </div>
@@ -104,9 +104,9 @@ const BirdNest = () => {
               "md:text-left md:pl-5 md:items-start md:max-w-[440px]"
             )}
           >
-            <p className={componentStyles.title}>Developer Hub</p>
+            <p className={componentStyles.title}>{birdnestData.hub.title}</p>
             <span className={componentStyles.description}>
-              {`An optimal space designed for developers. Start exploring technological architecture and actualize your blockchain ideas with Firebird Developer Hub.`}
+              {birdnestData.hub.description}
             </span>
             <div className={clsx(componentStyles.button, "gap-2")}>
               <Button className="px-[33px] bg-black text-white">
@@ -162,9 +162,11 @@ const BirdNest = () => {
               "md:text-left md:pr-5 md:items-start md:max-w-[440px]"
             )}
           >
-            <p className={componentStyles.title}>Firebird Documentation</p>
+            <p className={componentStyles.title}>
+              {birdnestData.documentation.title}
+            </p>
             <span className={componentStyles.description}>
-              {`Read more about the Firebird ecosystem’s features, solutions, infrastructure, roadmap, etc., and understand why our journey started.`}
+              {birdnestData.documentation.description}
             </span>
             <div className={componentStyles.button}>
               <ButtonLink

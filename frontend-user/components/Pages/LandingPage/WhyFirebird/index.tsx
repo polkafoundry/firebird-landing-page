@@ -22,17 +22,20 @@ const features: Array<FeatureTypes> = [
   {
     title: "EVM Compatible",
     image: "/images/features-evm.svg",
-    detail: `EVM Compatible enables straightforward migration from Ethereum and BSC, reuse of an abundance of toolchains, including MetaMask, Remix, Hardhat, etc.`
+    detail:
+      "Enable straightforward migration from Ethereum and BSC, and reuse of an abundance of toolchains, including MetaMask, Remix, Hardhat, and many more."
   },
   {
     title: "Layer 2 ",
     image: "/images/features-layer-2.png",
-    detail: `Solve scalability problems by adopting Firebird's Layer 2 solutions for lower transaction fees, higher speed, and more security.`
+    detail:
+      "Solve scalability problems by adopting Firebird's Layer 2 solutions for lower transaction fees, higher speed, and advanced security."
   },
   {
     title: "Compliance",
     image: "/images/features-compliance.png",
-    detail: `Firebird provides an anti-cheat mechanism and security detection to prevent players from hacking or cheating and protect game fairness. `
+    detail:
+      "Adopt Firebird's anti-cheat mechanism and security detection to prevent players from hacking and protect game fairness."
   }
 ]
 
