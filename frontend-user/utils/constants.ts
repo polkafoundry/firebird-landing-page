@@ -45,8 +45,8 @@ export const socialsData: Array<SocialItemTypes> = [
     img: iconReddit,
     imgHover: iconRedditHover,
     label: "Reddit",
-    url: "https://www.reddit.com/r/firebird/"
-    // username: "r/firebird"
+    url: "https://www.reddit.com/r/firebirdchain",
+    username: "r/firebirdchain"
   },
   {
     img: iconAnnouncement,
