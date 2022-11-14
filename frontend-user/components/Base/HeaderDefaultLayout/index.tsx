@@ -16,6 +16,10 @@ type RouteTypes = {
 
 const routes: Array<RouteTypes> = [
   {
+    label: "Event",
+    uri: "https://event.firebirdchain.com/"
+  },
+  {
     label: "Bird nest",
     uri: "/bird-nest"
   },
