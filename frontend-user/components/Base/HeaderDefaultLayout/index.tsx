@@ -1,20 +1,26 @@
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { HTMLAttributeAnchorTarget, useState } from "react"
 
-import iconMenu from "/public/images/icon-menu.svg"
-import iconClose from "/public/images/icon-close.svg"
-import logo from "/public/images/logo-text.svg"
-import { SocialItemTypes, socialsData } from "../../../utils/constants"
 import { useRouter } from "next/router"
+import { SocialItemTypes, socialsData } from "../../../utils/constants"
+import iconClose from "/public/images/icon-close.svg"
+import iconMenu from "/public/images/icon-menu.svg"
+import logo from "/public/images/logo-text.svg"
 
 type RouteTypes = {
   label: string
   uri: string
+  target?: HTMLAttributeAnchorTarget
 }
 
 const routes: Array<RouteTypes> = [
+  {
+    label: "Event",
+    uri: "https://event.firebirdchain.com/",
+    target: "_blank"
+  },
   {
     label: "Bird nest",
     uri: "/bird-nest"
@@ -25,7 +31,8 @@ const routes: Array<RouteTypes> = [
   },
   {
     label: "Documentation",
-    uri: "https://docs.firebirdchain.com/"
+    uri: "https://docs.firebirdchain.com/",
+    target: "_blank"
   },
   {
     label: "FAQ",
@@ -59,6 +66,7 @@ const HeaderDefaultLayout = () => {
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
+                target={item?.target ?? "_self"}
                 className={clsx("hover:tracking-wider duration-500", {
                   "text-main": asPath === item.uri
                 })}
@@ -107,6 +115,7 @@ const HeaderDefaultLayout = () => {
           {routes.map((item: RouteTypes, index: number) => (
             <Link key={index} href={item.uri}>
               <a
+                target={item?.target ?? "_self"}
                 className={clsx("hover:tracking-wider duration-500", {
                   "text-main": asPath === item.uri
                 })}
