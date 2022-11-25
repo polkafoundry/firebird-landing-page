@@ -92,9 +92,11 @@ const HeaderDefaultLayout = () => {
 
   return (
     <>
-      <div className="flex bg-[#FB7800] w-full h-[52px] justify-center items-center">
-        <Image src={imgBell} alt="" />
-        <p className="m-0 mx-3 text-sm md:text-20px text-center">
+      <div className="flex bg-[#FB7800] w-full md:h-[44px] h-[52px] justify-center items-center">
+        <div className="relative md:block h-fit hidden pt-2">
+          <Image src={imgBell} alt="" width={32} />
+        </div>
+        <p className="m-0 mx-3 text-sm md:text-base text-center">
           <b>PolkaFoundry has rebranded as Firebird. </b>
           <br className="block md:hidden" />
           <span className="">See more information </span>
@@ -107,12 +109,14 @@ const HeaderDefaultLayout = () => {
             HERE
           </a>
         </p>
-        <Image src={imgBell} alt="" />
+        <div className="relative md:block h-fit hidden pt-2">
+          <Image src={imgBell} alt="" width={32} />
+        </div>
       </div>
 
       <nav
         className={clsx(
-          "absolute  top-[52px] -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main text-white",
+          "absolute md:top-[44px] top-[52px] -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main text-white",
           "md:px-[120px]",
           "xs:px-[60px]",
           "pl-5 pr-6"
