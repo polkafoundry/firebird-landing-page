@@ -1,10 +1,15 @@
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
-import { HTMLAttributeAnchorTarget, useState } from "react"
-
 import { useRouter } from "next/router"
-import { SocialItemTypes, socialsData } from "../../../utils/constants"
+import { HTMLAttributeAnchorTarget, useState } from "react"
+import {
+  REBRAND_INFO_URL,
+  SocialItemTypes,
+  socialsData
+} from "../../../utils/constants"
+
+import imgBell from "/public/images/banner-bell.svg"
 import iconClose from "/public/images/icon-close.svg"
 import iconMenu from "/public/images/icon-menu.svg"
 import logo from "/public/images/logo-text.svg"
@@ -16,11 +21,6 @@ type RouteTypes = {
 }
 
 const routes: Array<RouteTypes> = [
-  {
-    label: "Event",
-    uri: "https://event.firebirdchain.com/",
-    target: "_blank"
-  },
   {
     label: "Bird nest",
     uri: "/bird-nest"
@@ -92,9 +92,27 @@ const HeaderDefaultLayout = () => {
 
   return (
     <>
+      <div className="flex bg-[#FB7800] w-full h-[52px] justify-center items-center">
+        <Image src={imgBell} alt="" />
+        <p className="m-0 mx-3 text-sm md:text-20px text-center">
+          <b>PolkaFoundry has rebranded as Firebird. </b>
+          <br className="block md:hidden" />
+          <span className="">See more information </span>
+          <a
+            href={REBRAND_INFO_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline font-semibold"
+          >
+            HERE
+          </a>
+        </p>
+        <Image src={imgBell} alt="" />
+      </div>
+
       <nav
         className={clsx(
-          "absolute -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main text-white",
+          "absolute  top-[52px] -translate-x-1/2 left-1/2 h-20 w-full flex items-center justify-between max-w-screen-main text-white",
           "md:px-[120px]",
           "xs:px-[60px]",
           "pl-5 pr-6"
