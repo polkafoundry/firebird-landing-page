@@ -12,9 +12,6 @@ import iconGithub from "/public/images/socials/github.svg"
 import iconReddit from "/public/images/socials/reddit.svg"
 import { birdnestData } from "../../../utils/constants"
 
-const firebirdTechBlog =
-  process.env.FIREBIRD_TECH_BLOG || "http://techblog.firebirdchain.com"
-
 const BirdNestPage = () => {
   return (
     <div className="flex flex-col w-full">

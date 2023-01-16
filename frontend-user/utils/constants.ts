@@ -15,6 +15,7 @@ import iconRedditHover from "/public/images/socials/reddit.svg"
 export const REBRAND_INFO_URL =
   "https://medium.com/polkafoundry/polkafoundry-rebrands-as-firebird-game-dedicated-web2-friendly-high-performance-blockchain-ff7972c3e2f6"
 export const PHOENIX_CUP_URL = "https://phoenixcup.firebirdchain.com/"
+export const TECHBLOG_URL = "https://techblog.firebirdchain.com/"
 
 export type SocialItemTypes = {
   img: string
